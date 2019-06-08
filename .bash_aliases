@@ -6,10 +6,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias ls='ls --color=auto'
-alias l="ll"
-alias ll='ls -alF'
+alias ll='ls -alrtF'
 alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -28,21 +26,3 @@ alias gp="git push"
 alias pacman="sudo pacman"
 alias mount="sudo mount"
 alias umount="sudo umount"
-
-
-
-#proxy aliases
-alias ep="source ~/enable-proxy.sh"
-alias dp="source ~/disable-proxy.sh"
-
-alias qb="qutebrowser &"
-
-#display aliases
-alias wd="sh ~/.screenlayout/work.sh"
-alias wh="sh ~/.screenlayout/home.sh"
-
-#hosts
-alias vh="sudo vim /etc/hosts"
-
-#filemanager
-alias fm="vifm"

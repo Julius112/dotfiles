@@ -1,5 +1,5 @@
 #Set the mod key
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -19,10 +19,10 @@ floating_modifier $mod
 bindsym $mod+Return exec st
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run 
+bindsym $mod+Space exec rofi -show run 
 #rofi config in ~/.config/rofi/config
 
 # change focus
@@ -150,6 +150,7 @@ bar {
 
 # set the lockshortcut
 bindsym Pause exec ~/.config/i3/lock_screen.sh
+bindsym $mod+Shift+q exec ~/.config/i3/lock_screen.sh
 exec --no-startup-id xautolock -locker "~/.config/i3/lock_screen.sh" -time 10 -detectsleep -notify 10
 
 # set screenshot shortcut
@@ -159,7 +160,6 @@ bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures
 # map the caps button to the escape key
 # map ALT+oua to german umlauts
 # pipe to dev null to get rid of warnings of missing keycodes
-exec_always --no-startup-id xkbcomp -xkb ~/.xkbmap_custom $DISPLAY 2>/dev/null
 
 #settings for screenkeys:
 #bindsym $mod+Shift+s exec screenkey
@@ -171,10 +171,6 @@ exec_always --no-startup-id xkbcomp -xkb ~/.xkbmap_custom $DISPLAY 2>/dev/null
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1   toggle # mute sound
-
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
