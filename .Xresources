@@ -19,7 +19,7 @@ color0:   #000000
 *color15:  #f7f7f6
 
 !! for xtem 
-xterm*vt100.background: black
+xterm*vt100.background: darkgrey
 xterm*vt100.foreground: lightgrey 
 xterm*faceName: monospace:pixelsize=13
 !Xlf.antialias:true
@@ -28,10 +28,10 @@ xterm*faceName: monospace:pixelsize=13
 !Xlf.lcdfilter:lcddefault
 !Xlf.rgba:rg
 
-!rofi.lines: 4
-!rofi.width: 100
+rofi.lines: 4
+rofi.width: 50
 !rofi.padding: 100
-rofi.opacity: "75"
-rofi.auto-select: true
-rofi.eh: 4
-rofi.theme: /usr/share/rofi/themes/sidebar
+rofi.opacity: "50"
+!rofi.auto-select: true
+!rofi.eh: 4
+!rofi.theme: /usr/share/rofi/themes/solarized.rasi
