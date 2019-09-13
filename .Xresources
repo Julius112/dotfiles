@@ -1,7 +1,7 @@
 !! ~/.Xdefaults
 !! run `xrdb .Xdefaults` to enable the settings
 
-color0:   #000000
+*color0:   #000000
 *color1:   #e40000
 *color2:   #8dc627
 *color3:   #e0ca00
@@ -19,14 +19,15 @@ color0:   #000000
 *color15:  #f7f7f6
 
 !! for xtem 
-xterm*vt100.background: darkgrey
-xterm*vt100.foreground: lightgrey 
+*background: #101010
+*foreground: lightgrey
 xterm*faceName: monospace:pixelsize=13
 !Xlf.antialias:true
 !Xlf.hinting:true
 !Xlf.hintstyle:hintslight
 !Xlf.lcdfilter:lcddefault
 !Xlf.rgba:rg
+st.font:	Liberation Mono:pixelsize=10:antialias=true:autohint=true;
 
 rofi.lines: 4
 rofi.width: 50

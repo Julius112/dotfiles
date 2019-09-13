@@ -1,0 +1,36 @@
+#!/usr/bin/sh
+
+STATE_FILE=/home/julius/.unison/status
+failed=0
+
+{ read -r prog_state && read -r states; } < $STATE_FILE
+IFS=';' read -ra sync_states <<< "$states"
+for sync_state in "${sync_states[@]}"; do
+	IFS='=' read -ra success <<< "$sync_state"
+	if [ ${success[1]} -eq 0 ]; then
+		((failed++))
+	fi
+done
+
+
+if [ $prog_state == "idle" ]; then
+	echo ""
+	echo ""
+	if [ $failed -gt 1 ]; then
+		echo "#FF0000"
+	elif [ $failed -gt 0 ]; then
+		echo "#FFFF00"
+	fi
+elif [ $prog_state == "active_wait" ]; then
+	echo ""
+	echo ""
+	echo "#FFFF00"
+elif [ $prog_state == "active_sync" ]; then
+	echo ""
+	echo ""
+	echo "#83d0c9"
+else
+	echo ""
+	echo ""
+	echo "#FF0000"
+fi

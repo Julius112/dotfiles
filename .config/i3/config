@@ -38,6 +38,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec st
+#bindsym $mod+Return exec urxvt
 
 
 # kill focused window
@@ -51,10 +52,10 @@ bindsym $mod+space exec rofi -show run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -75,7 +76,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -107,13 +108,13 @@ bindsym Mod1+Shift+Tab workspace prev
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 - Terminals"
 set $ws2 "2 - Web"
-set $ws3 "3"
+set $ws3 "3 - KeePass"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9 - Mail"
 set $ws10 "10 - Music"
 
 # switch to workspace
@@ -141,8 +142,10 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # move programs to a certain workspace
-assign [class="Google-chrome"] $ws2
-assign [class="Firefox"] $ws2
+#assign [class="Google-chrome"] $ws2
+#assign [class="Firefox"] $ws2
+assign [class="KeePass2"] $ws3
+assign [class="Thunderbird"] $ws9
 for_window [class="Spotify"] move to workspace number $ws10
 
 # reload the configuration file
@@ -152,7 +155,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-for_window [class="st.*"] border pixel 2 
+for_window [class="URxvt"] border pixel 2 
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -203,15 +206,17 @@ bar {
 }
 
 # set the lockshortcut
-bindsym Pause exec ~/.config/i3/lock_screen.sh
+#bindsym Pause exec ~/.config/i3/lock_screen.sh
 bindsym $mod+Shift+q exec ~/.config/i3/lock_screen.sh
 exec --no-startup-id xautolock -locker "~/.config/i3/lock_screen.sh" -time 10 -detectsleep -notify 10
 
 # set screenshot shortcut
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 2%- unmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 3 -- +5%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 3 -- +5%
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Media player controls
@@ -220,15 +225,23 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #Wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Sonstiges/wallpaper2.png
+#exec_always --no-startup-id feh --bg-center ~/Pictures/Sonstiges/wallpaper2.png
 
 #for tranparency (rofi/st)
 exec --no-startup-id compton -b --config ~/.config/compton.conf 
 
 #for having st/xterm to load correct customizations
 exec_always --no-startup-id xrdb ~/.Xresources
+exec_always setxkbmap de
 
 #for renaming i3 workspaces according to the terminal
 #exec_always --no-startup-id ~/.config/i3/i3-renameworkspaces/i3-renameworkspaces.pl -c ~/.config/i3/i3-renameworkspaces/config
 
+#for hiding the mouse pointer
+#exec_always --no-startup-id unclutter
 
+#mounting Familie over ftps
+#exec --no-startup-id curlftpfs -o utf8,ssl,cacert=/home/julius/niedserver.pem,no_verify_peer ftp://niedworok.no-ip.org:1321/Familie /mnt/Familie
+
+#watching Docs for changes
+#exec --no-startup-id ~/unison_watch.sh &
