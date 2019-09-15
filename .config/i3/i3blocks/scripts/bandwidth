@@ -15,7 +15,6 @@
 
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 # Use the provided interface, otherwise the device used for the default route.
 if [[ -n $BLOCK_INSTANCE ]]; then
   INTERFACE=$BLOCK_INSTANCE
@@ -70,21 +69,23 @@ tx_rate=$(( $tx_diff / $time_diff ))
 # 1024^2 = 1048576, then display MiB/s instead
 
 # incoming
-echo -n " "
 rx_kib=$(( $rx_rate >> 10 ))
-if [[ "$rx_rate" -gt 1048576 ]]; then
-  printf '%sM' "`echo "scale=1; $rx_kib / 1024" | bc`"
+if [[ "$rx_rate" -gt 1048575 ]]; then
+  rx_bandwidth=$(printf '%sM' "`echo "scale=1; $rx_kib / 1024" | bc`")
 else
-  echo -n "${rx_kib}K"
+  rx_bandwidth=$(echo -n "${rx_kib}K")
 fi
-
-echo -n " "
 
 # outgoing
-echo -n " "
 tx_kib=$(( $tx_rate >> 10 ))
-if [[ "$tx_rate" -gt 1048576 ]]; then
-  printf '%sM' "`echo "scale=1; $tx_kib / 1024" | bc`"
+if [[ "$tx_rate" -gt 1048575 ]]; then
+  tx_bandwidth=$(printf '%sM' "`echo "scale=1; $tx_kib / 1024" | bc`")
 else
-  echo -n "${tx_kib}K"
+  tx_bandwidth=$(echo -n "${tx_kib}K")
 fi
+
+printf '%7s ' "$rx_bandwidth"
+printf '%7s ' "$tx_bandwidth"
+echo ''
+printf '%7s ' "$rx_bandwidth"
+printf '%7s ' "$tx_bandwidth"

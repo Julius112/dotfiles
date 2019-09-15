@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-scale '/home/julius/Pictures/Sonstiges/wallpaper2.png' 
+feh --no-fehbg --bg-center '/home/julius/Pictures/Sonstiges/wallpaper2.png' 

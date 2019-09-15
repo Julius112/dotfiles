@@ -11,35 +11,73 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<extendToNextHop\>
+~MSle0~/julius.n@gmx.net
 
 # Last Substitute Search Pattern:
-~MSle0&\n
+~MSle0&^M
 
 # Last Substitute String:
-$ 
+$
 
 # Command Line History (newest to oldest):
-:q
-|2,0,1568389972,,"q"
-:x
-|2,0,1568389877,,"x"
+:qa
+|2,0,1568539886,,"qa"
 :w
-|2,0,1568388651,,"w"
+|2,0,1568539869,,"w"
+:q
+|2,0,1568537344,,"q"
+:x
+|2,0,1568535651,,"x"
 :q!
-|2,0,1568386797,,"q!"
+|2,0,1568496243,,"q!"
+:e .config/i3/i3blocks/i3blocks.conf
+|2,0,1568490021,,"e .config/i3/i3blocks/i3blocks.conf"
+:q!"
+|2,0,1568489547,,"q!\""
+:xa
+|2,0,1568488014,,"xa"
+:tabe .config/i3/i3blocks/i3blocks.conf
+|2,0,1568486946,,"tabe .config/i3/i3blocks/i3blocks.conf"
+:tabe /mnt/julius_home/linux-pc/home/julius/.zshrc
+|2,0,1568468212,,"tabe /mnt/julius_home/linux-pc/home/julius/.zshrc"
+:tabe .profile
+|2,0,1568468133,,"tabe .profile"
+:w /tmp/grub
+|2,0,1568466262,,"w /tmp/grub"
+:vsplit profiles.ini_old
+|2,0,1568462790,,"vsplit profiles.ini_old"
+:vpslit .thunderbird/profiles.ini_old
+|2,0,1568462184,,"vpslit .thunderbird/profiles.ini_old"
+:%s/^M/\n/gc
+|2,0,1568461697,,"%s/^M/\\n/gc"
+:vsplit profiles-old.ini
+|2,0,1568458925,,"vsplit profiles-old.ini"
+:qaa
+|2,0,1568458283,,"qaa"
+:tabe .config/i3/i3blocks/scripts/bandwidth
+|2,0,1568458222,,"tabe .config/i3/i3blocks/scripts/bandwidth"
+:tabe .config/i3/config
+|2,0,1568457442,,"tabe .config/i3/config"
 :x!
-|2,0,1568386611,,"x!"
+|2,0,1568399985,,"x!"
+:vsplit .config/i3/config_julius
+|2,0,1568396018,,"vsplit .config/i3/config_julius"
+:vpslit .config/i3/config_julius
+|2,0,1568395979,,"vpslit .config/i3/config_julius"
+:w /tmp/i3log3
+|2,0,1568395788,,"w /tmp/i3log3"
+:w /tmp/i3log1
+|2,0,1568395777,,"w /tmp/i3log1"
+:w /tmp/i3log2
+|2,0,1568395761,,"w /tmp/i3log2"
+:tabe
+|2,0,1568395732,,"tabe"
 :qa!
 |2,0,1568306029,,"qa!"
-:qa
-|2,0,1568306024,,"qa"
 :set nu
 |2,0,1568278354,,"set nu"
 :tabe api/OnionAPInterface.java
 |2,0,1568278336,,"tabe api/OnionAPInterface.java"
-:xa
-|2,0,1568303461,,"xa"
 :wa
 |2,0,1568303458,,"wa"
 :set tabstop=4
@@ -82,46 +120,26 @@ $
 |2,0,1568295102,,"set list"
 :tabe util/defines.h
 |2,0,1568284314,,"tabe util/defines.h"
-:tabe api/onion_api_server.h
-|2,0,1568284294,,"tabe api/onion_api_server.h"
-:tabe api/onion_api_server.c
-|2,0,1568284289,,"tabe api/onion_api_server.c"
-:tabe api/api_message.h
-|2,0,1568284282,,"tabe api/api_message.h"
-:tabe util/rps/rps.c
-|2,0,1568281800,,"tabe util/rps/rps.c"
-:tabe util/rps/rps.h
-|2,0,1568281737,,"tabe util/rps/rps.h"
-:tabe core/onion_circuit.h
-|2,0,1568276208,,"tabe core/onion_circuit.h"
-:tabe core/onion_circuit.c
-|2,0,1568276202,,"tabe core/onion_circuit.c"
-:tabe ../tests/unit/api_server/api_server_mocks.h
-|2,0,1568297142,,"tabe ../tests/unit/api_server/api_server_mocks.h"
-:tabe ../tests/unit/api_server/check_api_server.c
-|2,0,1568297019,,"tabe ../tests/unit/api_server/check_api_server.c"
-:tabe util/server_socket.c
-|2,0,1568296913,,"tabe util/server_socket.c"
-:call pathogen#infect()
-|2,0,1568276156,,"call pathogen#infect()"
-:call add(g:pathogen_disabled, 'vim-linux-coding-style')
-|2,0,1568276147,,"call add(g:pathogen_disabled, 'vim-linux-coding-style')"
-:let g:pathogen_disabled = []
-|2,0,1568276116,,"let g:pathogen_disabled = []"
-:tabe OnionCircuit.java
-|2,0,1568219856,,"tabe OnionCircuit.java"
-:tabe api/onion_api_connection.h
-|2,0,1568220837,,"tabe api/onion_api_connection.h"
-:%s/#.*$//gc
-|2,0,1568223839,,"%s/#.*$//gc"
-:vsplit listlong.c
-|2,0,1568223806,,"vsplit listlong.c"
-:set expandtab
-|2,0,1568223695,,"set expandtab"
-:e protocol/onion_hop_server.c
-|2,0,1568195571,,"e protocol/onion_hop_server.c"
 
 # Search String History (newest to oldest):
+? @$
+|2,1,1568465172,,"@$"
+?/julius.n@gmx.net
+|2,1,1568464897,47,"julius.n@gmx.net"
+? ^M
+|2,1,1568461697,,"^M"
+?/onfig
+|2,1,1568457481,47,"onfig"
+?/xrandr
+|2,1,1568398647,47,"xrandr"
+?/for_window
+|2,1,1568396916,47,"for_window"
+?/COMMAND
+|2,1,1568395690,47,"COMMAND"
+?/<
+|2,1,1568393657,47,"<"
+?/-
+|2,1,1568393515,47,"-"
 ? \<extendToNextHop\>
 |2,1,1568296708,,"\\<extendToNextHop\\>"
 ? \<waitForExchangedSuccess\>
@@ -204,24 +222,6 @@ $
 |2,1,1568196665,47,"ssl_socket"
 ?/rps
 |2,1,1568196237,47,"rps"
-? return;
-|2,1,1568192688,,"return;"
-? \<socket_server_args_t\>
-|2,1,1568132046,,"\\<socket_server_args_t\\>"
-? \<init_ssl_server_socket\>
-|2,1,1568131945,,"\\<init_ssl_server_socket\\>"
-? \<start_client_thread\>
-|2,1,1568123613,,"\\<start_client_thread\\>"
-? \<ssl_server_wrapper\>
-|2,1,1568123595,,"\\<ssl_server_wrapper\\>"
-? \<api_server_handle_client\>
-|2,1,1568123580,,"\\<api_server_handle_client\\>"
-? \<ssl_server_args_t\>
-|2,1,1568123454,,"\\<ssl_server_args_t\\>"
-? \<args\>
-|2,1,1568123442,,"\\<args\\>"
-? \<handle\>
-|2,1,1568123194,,"\\<handle\\>"
 
 # Expression History (newest to oldest):
 
@@ -231,111 +231,41 @@ $
 
 # Registers:
 "0	LINE	0
-	instance=enp0s25
-|3,0,0,1,1,0,1568389001,"instance=enp0s25"
+	for_window [class="Zathura"] border pixel 2 
+|3,0,0,1,1,0,1568539862,"for_window [class=\"Zathura\"] border pixel 2 "
 "1	LINE	0
-	instance=enp2s0
-|3,0,1,1,1,0,1568389003,"instance=enp2s0"
-"2	BLOCK	0
-	.
-	.
-|3,0,2,2,2,0,1568388649,".","."
-"3	BLOCK	10
-	xterm*vt100
-	xterm*vt100
-|3,0,3,2,2,10,1568388646,"xterm*vt100","xterm*vt100"
+		sudo cryptsetup open -d /home/julius/.data_keyfile /dev/sda1 data
+|3,0,1,1,1,0,1568533225,"	sudo cryptsetup open -d /home/julius/.data_keyfile /dev/sda1 data"
+"2	LINE	0
+	397
+<192.168.4.113 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm5Tp2u+cwzUwnxDT8kBYAFl8erfj4VeBBcOl0MUrD+vFdMNS6OtqOdv/FNKF0dLRszj9AkqdJXF09oz+qfeJTwBlJocgzQ3kKoNydpn37gScYDL1JsMH00oWd2yt3FUHvdLDUWVFwxY3FdZOsA6RsTZa4psxFJxuJid5TzWZj9YgjgODUmCzoL7MxuS7cqqBhqMOkbu7lXmn7hlXcsBkUvJs4W8gQsokEDgXmJKhxCwf1My3mRum/32lhnuhJ0uN/sqWezofv5GynfyD212PNbol6GEk/yWZYgLPHMoHh2ENRbg3Gtwdy6IBO87iNijgHCISb4hW3jYI9r4xpi7wR
+|3,0,2,1,1,0,1568495703,"192.168.4.113 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm5Tp2u+cwzUwnxDT8kBYAFl8erfj4VeBBcOl0MUrD+vFdMNS6OtqOdv/FNKF0dLRszj9AkqdJXF09oz+qfeJTwBlJocgzQ3kKoNydpn37gScYDL1JsMH00oWd2yt3FUHvdLDUWVFwxY3FdZOsA6RsTZa4psxFJxuJid5TzWZj9YgjgODUmCzoL7MxuS7cqqBhqMOkbu7lXmn7hlXcsBkUvJs4W8gQsokEDgXmJKhxCwf1My3mRum/32lhnuhJ0uN/sqWezofv5GynfyD212PNbol6GEk/yWZYgLPHMoHh2ENRbg3Gtwdy6IBO87iNijgHCISb4hW3jYI9r4xpi7wR"
+"3	BLOCK	0
+	6
+	6
+|3,0,3,2,2,0,1568490008,"6","6"
 "4	BLOCK	0
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-	.
-|3,0,4,2,16,0,1568388611,".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","."
-"5	BLOCK	1
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-	st
-|3,0,5,2,16,1,1568388543,"st","st","st","st","st","st","st","st","st","st","st","st","st","st","st","st"
-"6	BLOCK	1
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-	!!
-|3,0,6,2,15,1,1568388313,"!!","!!","!!","!!","!!","!!","!!","!!","!!","!!","!!","!!","!!","!!","!!"
+	6
+	6
+|3,0,4,2,2,0,1568490005,"6","6"
+"5	LINE	0
+	printf '%-5s ï£' "$rx_bandwidth"
+|3,0,5,1,1,0,1568487805,"printf '%-5s ï£' \"$rx_bandwidth\""
+"6	LINE	0
+	rx_bandwidth="0M"
+	
+|3,0,6,1,2,0,1568487584,"rx_bandwidth=\"0M\"",""
 "7	BLOCK	0
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-|3,0,7,2,16,0,1568388168,"#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#"
+	-
+	-
+|3,0,7,2,2,0,1568487497,"-","-"
 "8	BLOCK	0
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-|3,0,8,2,16,0,1568388098,"*","*","*","*","*","*","*","*","*","*","*","*","*","*","*","*"
+	-
+	-
+|3,0,8,2,2,0,1568487495,"-","-"
 "9	LINE	0
-	#bindsym $mod+Return exec urxvtc
-|3,0,9,1,1,0,1568387609,"#bindsym $mod+Return exec urxvtc"
+	
+|3,0,9,1,1,0,1568487433,""
 "a@	CHAR	0
 	0wwa&€ýan ll
 |3,2,10,0,1,0,1568297074,"0wwa&€ýan ll"
@@ -343,278 +273,461 @@ $
 	€kd@a€ýa€ku5@b
 |3,0,11,0,1,0,1561887431,"€kd@a€ýa€ku5@b"
 ""-	CHAR	0
-	#
-|3,1,36,0,1,0,1568389157,"#"
+	Zathura
+|3,1,36,0,1,0,1568539867,"Zathura"
 
 # File marks:
-'0  90  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,48,90,0,1568389972,"~/.config/i3/i3blocks/scripts/bandwidth"
-'1  128  9  ~/.config/i3/i3blocks/i3blocks.conf
-|4,49,128,9,1568389877,"~/.config/i3/i3blocks/i3blocks.conf"
-'2  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,50,1,0,1568389854,"~/.config/i3/i3blocks/scripts/bandwidth"
-'3  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,51,1,0,1568389854,"~/.config/i3/i3blocks/scripts/bandwidth"
-'4  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,52,1,0,1568389705,"~/.config/i3/i3blocks/scripts/bandwidth"
-'5  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,53,1,0,1568389705,"~/.config/i3/i3blocks/scripts/bandwidth"
-'6  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,54,1,0,1568389698,"~/.config/i3/i3blocks/scripts/bandwidth"
-'7  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,55,1,0,1568389698,"~/.config/i3/i3blocks/scripts/bandwidth"
-'8  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,56,1,0,1568389698,"~/.config/i3/i3blocks/scripts/bandwidth"
-'9  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,57,1,0,1568389698,"~/.config/i3/i3blocks/scripts/bandwidth"
+'0  161  24  ~/.config/i3/config
+|4,48,161,24,1568539886,"~/.config/i3/config"
+'1  9  0  ~/.zshrc
+|4,49,9,0,1568537344,"~/.zshrc"
+'2  253  0  ~/.config/i3/config
+|4,50,253,0,1568535651,"~/.config/i3/config"
+'3  251  0  ~/.config/i3/config
+|4,51,251,0,1568535651,"~/.config/i3/config"
+'4  105  1  ~/.zshrc
+|4,52,105,1,1568533229,"~/.zshrc"
+'5  105  1  ~/.zshrc
+|4,53,105,1,1568533229,"~/.zshrc"
+'6  1  0  ~/.unison/documents.prf
+|4,54,1,0,1568496243,"~/.unison/documents.prf"
+'7  3  0  ~/.ssh/known_hosts
+|4,55,3,0,1568495704,"~/.ssh/known_hosts"
+'8  160  25  ~/.config/i3/config
+|4,56,160,25,1568490806,"~/.config/i3/config"
+'9  160  25  ~/.config/i3/config
+|4,57,160,25,1568490806,"~/.config/i3/config"
 
 # Jumplist (newest first):
--'  90  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,90,0,1568389972,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389940,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  128  9  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,128,9,1568389877,"~/.config/i3/i3blocks/i3blocks.conf"
--'  128  9  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,128,9,1568389877,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389871,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389871,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389854,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389854,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389705,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389705,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389698,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  1  0  ~/.config/i3/i3blocks/scripts/bandwidth
-|4,39,1,0,1568389698,"~/.config/i3/i3blocks/scripts/bandwidth"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  126  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,126,0,1568389675,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  1  0  ~/.config/i3/i3blocks/i3blocks.conf
-|4,39,1,0,1568389654,"~/.config/i3/i3blocks/i3blocks.conf"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
--'  2  0  ~/.xinitrc
-|4,39,2,0,1568389161,"~/.xinitrc"
+-'  161  24  ~/.config/i3/config
+|4,39,161,24,1568539886,"~/.config/i3/config"
+-'  1  0  ~/.config/i3/config
+|4,39,1,0,1568539817,"~/.config/i3/config"
+-'  9  0  ~/.zshrc
+|4,39,9,0,1568537344,"~/.zshrc"
+-'  9  0  ~/.zshrc
+|4,39,9,0,1568537344,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1568537337,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1568537337,"~/.zshrc"
+-'  253  0  ~/.config/i3/config
+|4,39,253,0,1568535651,"~/.config/i3/config"
+-'  251  0  ~/.config/i3/config
+|4,39,251,0,1568535651,"~/.config/i3/config"
+-'  251  0  ~/.config/i3/config
+|4,39,251,0,1568535651,"~/.config/i3/config"
+-'  234  0  ~/.config/i3/config
+|4,39,234,0,1568535648,"~/.config/i3/config"
+-'  232  0  ~/.config/i3/config
+|4,39,232,0,1568535648,"~/.config/i3/config"
+-'  232  0  ~/.config/i3/config
+|4,39,232,0,1568535648,"~/.config/i3/config"
+-'  1  0  ~/.config/i3/config
+|4,39,1,0,1568535522,"~/.config/i3/config"
+-'  1  0  ~/.config/i3/config
+|4,39,1,0,1568535522,"~/.config/i3/config"
+-'  105  1  ~/.zshrc
+|4,39,105,1,1568533229,"~/.zshrc"
+-'  105  1  ~/.zshrc
+|4,39,105,1,1568533229,"~/.zshrc"
+-'  105  1  ~/.zshrc
+|4,39,105,1,1568533229,"~/.zshrc"
+-'  105  1  ~/.zshrc
+|4,39,105,1,1568533229,"~/.zshrc"
+-'  105  1  ~/.zshrc
+|4,39,105,1,1568533229,"~/.zshrc"
+-'  105  1  ~/.zshrc
+|4,39,105,1,1568533229,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1568533220,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1568533220,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1568533220,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1568533220,"~/.zshrc"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  1  0  ~/.unison/documents.prf
+|4,39,1,0,1568496243,"~/.unison/documents.prf"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  3  0  ~/.ssh/known_hosts
+|4,39,3,0,1568495704,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1568495702,"~/.ssh/known_hosts"
 
 # History of marks within files (newest to oldest):
 
-> ~/.config/i3/i3blocks/scripts/bandwidth
-	*	1568389949	0
-	"	90	0
+> ~/.config/i3/config
+	*	1568539869	0
+	"	161	24
+	^	161	25
+	.	161	24
+	+	259	0
+	+	251	0
+	+	250	0
+	+	259	0
+	+	48	0
+	+	47	0
+	+	243	0
+	+	170	19
+	+	105	16
+	+	102	22
+	+	1	0
+	+	20	0
+	+	13	0
+	+	22	0
+	+	52	0
+	+	51	0
+	+	56	0
+	+	59	0
+	+	157	26
+	+	12	37
+	+	12	0
+	+	241	27
+	+	233	0
+	+	229	0
+	+	231	43
+	+	23	40
+	+	160	25
+	+	250	0
+	+	234	0
+	+	116	16
+	+	149	27
+	+	161	24
+
+> ~/.zshrc
+	*	1568537340	0
+	"	9	0
+	.	105	0
+	+	101	19
+	+	106	74
+	+	103	21
+	+	110	0
+	+	108	0
+	+	113	0
+	+	109	17
+	+	113	0
+	+	103	0
+	+	118	0
+	+	123	0
+	+	119	0
+	+	116	3
+	+	115	0
+	+	120	0
+	+	117	0
+	+	104	21
+	+	106	0
+	+	104	4
+	+	107	1
+	+	107	0
+	+	105	0
+
+> ~/.unison/documents.prf
+	*	1568495735	0
+	"	1	0
+
+> ~/.ssh/known_hosts
+	*	1568495703	0
+	"	3	0
+	.	3	0
+	+	3	0
+
+> ~/.bash_aliases
+	*	1568490466	0
+	"	1	20
+	^	1	21
+	.	1	20
+	+	11	0
+	+	10	14
+	+	11	7
+	+	12	0
+	+	1	20
 
 > ~/.config/i3/i3blocks/i3blocks.conf
-	*	1568389876	0
-	"	128	9
-	^	126	17
-	.	128	9
+	*	1568490027	0
+	"	127	11
+	^	127	12
+	.	127	11
 	+	126	15
 	+	119	0
 	+	128	9
+	+	62	9
+	+	68	9
+	+	86	9
+	+	97	9
+	+	105	10
+	+	118	9
+	+	105	9
+	+	128	9
+	+	125	6
+	+	126	46
+	+	129	0
+	+	128	9
+	+	134	14
+	+	130	0
+	+	127	11
 
-> ~/.xinitrc
-	*	1568389161	0
-	"	2	0
-	^	2	1
-	.	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	6
-	+	1	0
-	+	2	0
+> ~/.config/i3/i3blocks/scripts/bandwidth
+	*	1568490010	0
+	"	90	9
+	^	90	10
+	.	91	0
+	+	80	0
+	+	89	13
+	+	91	13
+	+	89	25
+	+	91	25
+	+	89	20
+	+	91	34
+	+	89	21
+	+	91	22
+	+	89	14
+	+	89	95
+	+	89	0
+	+	87	14
+	+	74	7
+	+	76	2
+	+	74	12
+	+	76	2
+	+	87	35
+	+	88	25
+	+	84	2
+	+	82	2
+	+	89	34
+	+	91	0
+	+	87	38
+	+	88	8
+	+	76	11
+	+	74	11
+	+	87	21
+	+	88	22
+	+	87	21
+	+	88	22
+	+	87	21
+	+	88	22
+	+	74	28
+	+	76	26
+	+	82	25
+	+	84	26
+	+	89	9
+	+	91	9
+	+	89	19
+	+	91	19
+	+	74	28
+	+	76	26
+	+	82	28
+	+	84	36
+	+	87	21
+	+	88	22
+	+	87	15
+	+	87	17
+	+	88	18
+	+	87	21
+	+	88	22
+	+	87	15
+	+	87	18
+	+	88	19
+	+	87	16
+	+	87	17
+	+	88	18
+	+	87	16
+	+	87	0
+	+	88	30
+	+	87	29
+	+	91	0
+	+	89	0
+	+	87	13
+	+	88	13
+	+	91	13
+	+	87	17
+	+	82	28
+	+	84	36
+	+	76	36
+	+	74	28
+	+	87	9
+	+	91	9
+	+	87	18
+	+	87	9
+	+	87	0
+	+	88	9
+	+	91	9
+	+	87	9
+	+	91	9
+	+	87	11
+	+	91	0
+	+	91	9
+	+	91	14
+	+	91	9
+	+	88	9
+	+	87	14
+	+	88	9
+	+	91	14
+	+	91	9
+	+	91	14
+	+	91	9
+	+	90	9
+	+	88	9
+	+	87	9
+	+	88	0
+	+	91	0
 
-> ~/.config/i3/config
-	*	1568389041	0
-	"	247	0
-	^	228	1
-	.	228	0
-	+	244	0
-	+	236	0
-	+	235	0
-	+	244	0
-	+	41	0
-	+	40	0
-	+	228	0
+> ~/.unison/status
+	*	1568489786	0
+	"	1	10
+	^	1	11
+	.	1	10
+	+	1	10
 
 > ~/.Xresources
-	*	1568388828	0
-	"	22	19
+	*	1568489544	0
+	"	1	0
 	^	22	20
-	.	22	19
+	.	30	36
 	+	25	0
 	+	30	8
 	+	4	1
@@ -630,10 +743,174 @@ $
 	+	22	20
 	+	23	17
 	+	22	19
+	+	30	36
 
-> ~/.bash_aliases
-	*	1568388327	0
+> ~/.histfile
+	*	1568489538	0
 	"	1	0
+
+> /mnt/julius_home/linux-pc/home/julius/.zshrc
+	*	1568468261	0
+	"	8	0
+
+> ~/.profile
+	*	1568468171	0
+	"	17	27
+
+> /etc/default/grub
+	*	1568466972	0
+	"	3	12
+	^	3	13
+	.	3	12
+	+	6	115
+	+	3	12
+
+> ~/.scripts/update-grup.sh
+	*	1568466669	0
+	"	3	4
+	^	3	5
+	.	3	4
+	+	3	4
+
+> ~/.scripts/update-initramfs.sh
+	*	1568466611	0
+	"	4	27
+	^	4	28
+	.	4	27
+	+	4	27
+
+> /usr/share/vim/vim81/doc/help.txt
+	*	1568466610	0
+	"	1	0
+
+> /etc/mkinitcpio.conf
+	*	1568466359	0
+	"	52	87
+	^	52	88
+
+> ~/.thunderbird/profiles.ini
+	*	1568465174	0
+	"	1	0
+	.	1	0
+	+	1	0
+	+	2	0
+	+	1	8
+	+	1	5
+	+	5	0
+	+	2	14
+	+	1	0
+
+> /mnt/julius_documents/E-Mail/Thunderbird_Profile/55r591xc.default/panacea.dat
+	*	1568464917	0
+	"	39	29
+
+> /mnt/julius_documents/E-Mail/Thunderbird_Profile/55r591xc.default/logins.json
+	*	1568464125	0
+	"	1	0
+
+> /mnt/julius_documents/E-Mail/Thunderbird_Profile/55r591xc.default/Mail/pop.gmx.net/Inbox.msf
+	*	1568463561	0
+	"	417	0
+
+> ~/.thunderbird/installs.ini
+	*	1568463185	0
+	"	1	0
+	.	2	14
+	+	2	14
+
+> ~/.thunderbird/profiles.ini_old
+	*	1568462978	0
+	"	3	0
+
+> /mnt/data/Documents/Arduino/DieBass/DieBassSpectrumAnalyser/DieBassSpectrumAnalyser.ino
+	*	1568461697	0
+	"	1	0
+
+> ~/.mozilla/firefox/profiles.ini
+	*	1568458995	0
+	"	12	21
+	^	12	22
+	.	12	21
+	+	9	0
+	+	10	0
+	+	8	0
+	+	2	8
+	+	5	8
+	+	10	0
+	+	12	21
+
+> ~/.mozilla/firefox/profiles-old.ini
+	*	1568458939	0
+	"	4	0
+
+> ~/.mozilla/firefox/profiles
+	*	1568458728	0
+	"	1	0
+
+> /etc/asound.conf
+	*	1568400532	0
+	"	1	0
+	^	3	12
+	.	9	0
+	+	8	1
+	+	7	9
+	+	3	9
+	+	9	0
+
+> /tmp/asound.conf
+	*	1568400063	0
+	"	3	11
+	^	3	12
+	.	3	9
+	+	8	0
+	+	7	9
+	+	3	9
+
+> ~/.config/i3/config_julius
+	*	1568396219	0
+	"	54	1
+
+> /tmp/i3log3
+	*	1568395874	0
+	"	1	0
+
+> /tmp/i3log2
+	*	1568395860	0
+	"	1	0
+
+> /tmp/i3log
+	*	1568395745	0
+	"	115213	63
+	.	115957	0
+	+	115957	0
+
+> ~/.bash_profile
+	*	1568394204	0
+	"	1	0
+
+> ~/.bashrc
+	*	1568394197	0
+	"	1	0
+
+> /etc/slsh.rc
+	*	1568393772	0
+	"	1	0
+
+> /etc/shells
+	*	1568393757	0
+	"	1	0
+
+> ~/.xinitrc
+	*	1568389161	0
+	"	2	0
+	^	2	1
+	.	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	6
+	+	1	0
+	+	2	0
 
 > ~/.config/i3/lock_screen.sh
 	*	1568387269	0

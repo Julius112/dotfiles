@@ -1,3 +1,5 @@
+alias open='mimeo -q'
+
 alias vi=vim
 
 alias grep='grep --color=auto'
@@ -5,8 +7,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias ls='ls --color=auto'
-alias ll='ls -alrtFh'
-alias la='ls -A'
+alias ll='ls -lrtFh'
+alias la='ls -alrtFh'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

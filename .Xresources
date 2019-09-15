@@ -27,7 +27,7 @@ xterm*faceName: monospace:pixelsize=13
 !Xlf.hintstyle:hintslight
 !Xlf.lcdfilter:lcddefault
 !Xlf.rgba:rg
-st.font:	Liberation Mono:pixelsize=10:antialias=true:autohint=true;
+st.font:	Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 
 rofi.lines: 4
 rofi.width: 50
