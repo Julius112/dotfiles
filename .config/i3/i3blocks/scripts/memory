@@ -29,6 +29,9 @@ awk -v type=$TYPE '
 /^Cached:/ {
 	mem_free+=$2
 }
+/^MemAvailable:/ {
+	mem_avail=$2
+}
 /^SwapTotal:/ {
 	swap_total=$2
 }
@@ -45,9 +48,9 @@ END {
 		}
 	}
 	else {
-		printf("%.1fG\n", (mem_total-mem_free)/1024/1024)
-		printf("%.1fG\n", (mem_total-mem_free)/1024/1024)
-		if ((mem_total/mem_free) > 2) {
+		printf("%.1fG\n", (mem_total-mem_avail)/1024/1024)
+		printf("%.1fG\n", (mem_total-mem_avail)/1024/1024)
+		if ((mem_total/mem_avail) > 2) {
 			printf("#FFFC00\n");
 		}
 	}

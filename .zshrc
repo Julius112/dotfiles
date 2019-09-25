@@ -103,6 +103,8 @@ source .bash_aliases
 # Mount data partition
 if ! grep -qs '/mnt/data ' /proc/mounts; then
 	sudo cryptsetup open -d /home/julius/.data_keyfile /dev/sda1 data
+	# wait for volume to be available
+	sudo lsblk | grep "vg--data-data" > /dev/null; while [[ $? -ne 0 ]] do sleep 1; done
 	sudo mount -o compress=zstd,user=julius /dev/mapper/vg--data-data /mnt/data
 fi
 
@@ -121,3 +123,5 @@ else
 	source $HOME/.keychain/$HOSTNAME-sh
 	### End-Keychain ###
 fi
+
+export PATH=$PATH:/opt/bin

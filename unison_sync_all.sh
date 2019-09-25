@@ -4,7 +4,7 @@ STATE_FILE=/home/julius/.unison/status
 
 function sync {
 	echo "syncing $1..."
-	/usr/local/bin/unison $1
+	/opt/bin/unison $1
 	if [ $? -eq 0 ]; then
 		sed -i -e "s/$1=./$1=1/g" $STATE_FILE
 		echo "sucessfully synced $1"

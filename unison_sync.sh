@@ -11,7 +11,7 @@ fi
 
 for i in `seq 1 2`; do
 	sed -i "1s/.*/active_sync/" $STATE_FILE
-	/usr/local/bin/unison $1 -ignore 'Name panacea.dat' -ignore 'Name aborted-session-ping' $2
+	/opt/bin/unison $1 -ignore 'Name panacea.dat' -ignore 'Name aborted-session-ping' $2
 	if [ $? -ne 0 ]; then
 		sed -i -e "s/$1=./$1=0/g" $STATE_FILE
 		sed -i "1s/.*/active_sync/" $STATE_FILE
