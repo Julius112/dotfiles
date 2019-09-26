@@ -117,6 +117,7 @@ if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]
 	exec startx
 else
 	HOSTNAME=`hostname`
+
 	### START-Keychain ###
 	# Let  re-use ssh-agent and/or gpg-agent between logins
 	/usr/bin/keychain $HOME/.ssh/id_ed25519
