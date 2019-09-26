@@ -21,10 +21,18 @@ if [[ $? -ne 0 ]]; then
 	exit
 fi
 
+if ! ping -c 1 $NAS_IP_INT > /dev/null; then
+	PROFILE=ext
+else
+	PROFILE=int
+fi
+echo "Setting Profile to $PROFILE"
+
+
 sed -i "1s/.*/active_sync/" $STATE_FILE
-sync documents
-sync music
-sync videos
-sync pictures
-#sync familie
+sync documents_$PROFILE
+sync music_$PROFILE
+sync videos_$PROFILE
+sync pictures_$PROFILE
+sync familie
 sed -i "1s/.*/idle/" $STATE_FILE
