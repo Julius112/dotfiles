@@ -20,14 +20,20 @@
 $53
 
 # Command Line History (newest to oldest):
+:xa
+|2,0,1569592006,,"xa"
+:w
+|2,0,1569591318,,"w"
+:tabe .config/i3/i3blocks/i3blocks_remote.conf
+|2,0,1569591167,,"tabe .config/i3/i3blocks/i3blocks_remote.conf"
+:wa
+|2,0,1569591111,,"wa"
+:tabe .config/i3/i3blocks/scripts/temperature
+|2,0,1569590653,,"tabe .config/i3/i3blocks/scripts/temperature"
 :x
 |2,0,1569589052,,"x"
 :q
 |2,0,1569589004,,"q"
-:w
-|2,0,1569588646,,"w"
-:xa
-|2,0,1569521077,,"xa"
 :XA
 |2,0,1569521075,,"XA"
 :tabe unison_sync.sh
@@ -82,8 +88,6 @@ $53
 |2,0,1569417680,,"tabe .scripts/set_profile.sh"
 :tabe .config/i3/i3blocks/scripts/keyindicator
 |2,0,1569416849,,"tabe .config/i3/i3blocks/scripts/keyindicator"
-:wa
-|2,0,1569416337,,"wa"
 :%s/26/23/gc
 |2,0,1569327349,,"%s/26/23/gc"
 :set spell
@@ -116,10 +120,6 @@ $53
 |2,0,1569005211,,"tabe util/defines.h"
 :tabe protocol/onion_message.c
 |2,0,1569005157,,"tabe protocol/onion_message.c"
-:%s/->circ_id/->circuit_id/gc
-|2,0,1569004351,,"%s/->circ_id/->circuit_id/gc"
-:tabe protocol/onion_hop_server.c
-|2,0,1569003731,,"tabe protocol/onion_hop_server.c"
 
 # Search String History (newest to oldest):
 ?/rofi
@@ -231,67 +231,40 @@ $53
 
 # Registers:
 "0	LINE	0
-		$full_text = 'ï‡¦ ';
-|3,0,0,1,1,0,1569580517,"	$full_text = 'ï‡¦ ';"
+		print "#FF0000\n";
+		print "#FF0000\n";
+|3,0,0,1,2,0,1569590760,"	print \"#FF0000\\n\";","	print \"#FF0000\\n\";"
 "1	LINE	0
-		$full_text = 'ï”¯ ';
-|3,0,1,1,1,0,1569580576,"	$full_text = 'ï”¯ ';"
+	echo $diff
+|3,0,1,1,1,0,1569591094,"echo $diff"
 "2	LINE	0
-	} else {
-|3,0,2,1,1,0,1569580449,"} else {"
-"3	LINE	0
-	if ! ping -c 1 $NAS_IP_INT > /dev/null; then
-		PROFILE=ext
-	else
-		PROFILE=int
-	fi
 	
-|3,0,3,1,6,0,1569519963,"if ! ping -c 1 $NAS_IP_INT > /dev/null; then","	PROFILE=ext","else","	PROFILE=int","fi",""
+|3,0,2,1,1,0,1569590784,""
+"3	LINE	0
+	
+	printf '%s' "$ds"
+|3,0,3,1,2,0,1569590778,"","printf '%s' \"$ds\""
 "4	LINE	0
 	
-|3,0,4,1,1,0,1569519429,""
+|3,0,4,1,1,0,1569590775,""
 "5	LINE	0
-	[battery]
-	#label=TEMP
-	label=
-	interval=30
-	color=#00FF00
-	
-|3,0,5,1,6,0,1569512513,"[battery]","#label=TEMP","label=","interval=30","color=#00FF00",""
-"6	LINE	0
-	bindsym $mod+space exec rofi -show run -lines 4 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
-|3,0,6,1,1,0,1569512379,"bindsym $mod+space exec rofi -show run -lines 4 -eh 2 -width 100 -padding 800 -opacity \"85\" -bw 0 -bc \"$bg-color\" -bg \"$bg-color\" -fg \"$text-color\" -hlbg \"$bg-color\" -hlfg \"#9575cd\" -font \"System San Francisco Display 18\""
+		color="#FFFC00";
+|3,0,5,1,1,0,1569590768,"	color=\"#FFFC00\";"
+"6	BLOCK	1
+	00
+	00
+|3,0,6,2,2,1,1569590767,"00","00"
 "7	LINE	0
-	rofi.fullscreen: true
-|3,0,7,1,1,0,1569512103,"rofi.fullscreen: true"
+	else
+		color="#FF0000";
+	fi
+|3,0,7,1,3,0,1569590754,"else","	color=\"#FF0000\";","fi"
 "8	LINE	0
-	rofi.width: 50
-|3,0,8,1,1,0,1569511986,"rofi.width: 50"
+		color="#FF0000";
+|3,0,8,1,1,0,1569590752,"	color=\"#FF0000\";"
 "9	LINE	0
-	rofi.lines 4 
-	rofi.eh 2 
-	rofi.width 100 
-	rofi.padding 500 
-	rofi.bw 0 
-	!rofi.bc "#3f444f" 
-	!rofi.bg "#3f444f" 
-	!rofi.fg "$#f3f4f5" 
-	!rofi.hlbg "#3f444f" 
-	!rofi.hlfg "#9575cd" 
-	rofi.font "System San Francisco Display 18"
-	rofi.color-window: argb:c82d303b, #7c8389, #1d1f21
-	rofi.color-normal: argb:031d1f21, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
-	rofi.color-urgent: argb:2c1d1f21, #cc6666, argb:e54b5160, #a54242, #f9f9f9
-	rofi.color-active: argb:2c1d1f21, #65acff, argb:e44b5160, #4491ed, #f9f9f9
-	!rofi.width: 100
-	!rofi.lines: 5
-	!rofi.columns: 2
-	!rofi.bw: 0
-	!rofi.padding: 400
-	!rofi.eh: 1
-	!rofi.hide-scrollbar: true
-|3,0,9,1,22,0,1569511804,"rofi.lines 4 ","rofi.eh 2 ","rofi.width 100 ","rofi.padding 500 ","rofi.bw 0 ","!rofi.bc \"#3f444f\" ","!rofi.bg \"#3f444f\" ","!rofi.fg \"$#f3f4f5\" ","!rofi.hlbg \"#3f444f\" ","!rofi.hlfg \"#9575cd\" ","rofi.font \"System San Francisco Display 18\"","rofi.color-window: argb:c82d303b, #7c8389, #1d1f21","rofi.color-normal: argb:031d1f21, #c4cbd4, argb:96404552, #4084d6, #f9f9f9",>76
-|<"rofi.color-urgent: argb:2c1d1f21, #cc6666, argb:e54b5160, #a54242, #f9f9f9","rofi.color-active: argb:2c1d1f21, #65acff, argb:e44b5160, #4491ed, #f9f9f9","!rofi.width: 100","!rofi.lines: 5","!rofi.columns: 2","!rofi.bw: 0","!rofi.padding: 400","!rofi.eh: 1","!rofi.hide-scrollbar: true"
+	    print "#FF0000\n";
+|3,0,9,1,1,0,1569590747,"    print \"#FF0000\\n\";"
 "a@	CHAR	0
 	whbvwhs €kb	o€ýaupzuuuu
 |3,2,10,0,1,0,1568990364,"whbvwhs €kb	o€ýaupzuuuu"
@@ -305,40 +278,66 @@ $53
 	
 |3,0,20,0,1,0,1568726908,""
 ""-	CHAR	0
-	!
-|3,1,36,0,1,0,1569588481,"!"
+	40
+|3,1,36,0,1,0,1569591289,"40"
 
 # File marks:
-'0  33  32  ~/.scripts/unison_sync_all.sh
-|4,48,33,32,1569589052,"~/.scripts/unison_sync_all.sh"
-'1  11  0  ~/.bash_aliases
-|4,49,11,0,1569589004,"~/.bash_aliases"
-'2  28  32  ~/.scripts/unison_sync.sh
-|4,50,28,32,1569588960,"~/.scripts/unison_sync.sh"
-'3  16  13  ~/.scripts/unison_startup.sh
-|4,51,16,13,1569588657,"~/.scripts/unison_startup.sh"
-'4  17  32  ~/.bash_aliases
-|4,52,17,32,1569588607,"~/.bash_aliases"
+'0  22  10  ~/.config/i3/i3blocks/scripts/btrfs
+|4,48,22,10,1569592006,"~/.config/i3/i3blocks/scripts/btrfs"
+'1  33  32  ~/.scripts/unison_sync_all.sh
+|4,49,33,32,1569589052,"~/.scripts/unison_sync_all.sh"
+'2  11  0  ~/.bash_aliases
+|4,50,11,0,1569589004,"~/.bash_aliases"
+'3  28  32  ~/.scripts/unison_sync.sh
+|4,51,28,32,1569588960,"~/.scripts/unison_sync.sh"
+'4  16  13  ~/.scripts/unison_startup.sh
+|4,52,16,13,1569588657,"~/.scripts/unison_startup.sh"
 '5  17  32  ~/.bash_aliases
 |4,53,17,32,1569588607,"~/.bash_aliases"
-'6  1  1  ~/.scripts/snapshot.sh
-|4,54,1,1,1569588483,"~/.scripts/snapshot.sh"
-'7  1  12  ~/.scripts/snapshot.sh
-|4,55,1,12,1569588455,"~/.scripts/snapshot.sh"
-'8  18  0  ~/.unison/documents_int.prf
-|4,56,18,0,1569588067,"~/.unison/documents_int.prf"
-'9  11  0  ~/.unison/music_int.prf
-|4,57,11,0,1569588057,"~/.unison/music_int.prf"
+'6  17  32  ~/.bash_aliases
+|4,54,17,32,1569588607,"~/.bash_aliases"
+'7  1  1  ~/.scripts/snapshot.sh
+|4,55,1,1,1569588483,"~/.scripts/snapshot.sh"
+'8  1  12  ~/.scripts/snapshot.sh
+|4,56,1,12,1569588455,"~/.scripts/snapshot.sh"
+'9  18  0  ~/.unison/documents_int.prf
+|4,57,18,0,1569588067,"~/.unison/documents_int.prf"
 
 # Jumplist (newest first):
+-'  22  10  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,22,10,1569592006,"~/.config/i3/i3blocks/scripts/btrfs"
+-'  18  31  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,18,31,1569590898,"~/.config/i3/i3blocks/scripts/btrfs"
+-'  25  6  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,25,6,1569590866,"~/.config/i3/i3blocks/scripts/btrfs"
+-'  27  0  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,27,0,1569590479,"~/.config/i3/i3blocks/scripts/btrfs"
+-'  13  48  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,13,48,1569590287,"~/.config/i3/i3blocks/scripts/btrfs"
+-'  4  11  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,4,11,1569590039,"~/.config/i3/i3blocks/scripts/btrfs"
+-'  1  0  ~/.config/i3/i3blocks/scripts/btrfs
+|4,39,1,0,1569589715,"~/.config/i3/i3blocks/scripts/btrfs"
 -'  33  32  ~/.scripts/unison_sync_all.sh
 |4,39,33,32,1569589052,"~/.scripts/unison_sync_all.sh"
+-'  33  32  ~/.scripts/unison_sync_all.sh
+|4,39,33,32,1569589052,"~/.scripts/unison_sync_all.sh"
+-'  1  0  ~/.scripts/unison_sync_all.sh
+|4,39,1,0,1569589010,"~/.scripts/unison_sync_all.sh"
 -'  1  0  ~/.scripts/unison_sync_all.sh
 |4,39,1,0,1569589010,"~/.scripts/unison_sync_all.sh"
 -'  11  0  ~/.bash_aliases
 |4,39,11,0,1569589004,"~/.bash_aliases"
 -'  11  0  ~/.bash_aliases
 |4,39,11,0,1569589004,"~/.bash_aliases"
+-'  11  0  ~/.bash_aliases
+|4,39,11,0,1569589004,"~/.bash_aliases"
+-'  11  0  ~/.bash_aliases
+|4,39,11,0,1569589004,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588994,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588994,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
 |4,39,1,0,1569588994,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
@@ -351,6 +350,22 @@ $53
 |4,39,28,32,1569588960,"~/.scripts/unison_sync.sh"
 -'  28  32  ~/.scripts/unison_sync.sh
 |4,39,28,32,1569588960,"~/.scripts/unison_sync.sh"
+-'  28  32  ~/.scripts/unison_sync.sh
+|4,39,28,32,1569588960,"~/.scripts/unison_sync.sh"
+-'  28  32  ~/.scripts/unison_sync.sh
+|4,39,28,32,1569588960,"~/.scripts/unison_sync.sh"
+-'  28  32  ~/.scripts/unison_sync.sh
+|4,39,28,32,1569588960,"~/.scripts/unison_sync.sh"
+-'  28  32  ~/.scripts/unison_sync.sh
+|4,39,28,32,1569588960,"~/.scripts/unison_sync.sh"
+-'  1  0  ~/.scripts/unison_sync.sh
+|4,39,1,0,1569588914,"~/.scripts/unison_sync.sh"
+-'  1  0  ~/.scripts/unison_sync.sh
+|4,39,1,0,1569588914,"~/.scripts/unison_sync.sh"
+-'  1  0  ~/.scripts/unison_sync.sh
+|4,39,1,0,1569588914,"~/.scripts/unison_sync.sh"
+-'  1  0  ~/.scripts/unison_sync.sh
+|4,39,1,0,1569588914,"~/.scripts/unison_sync.sh"
 -'  1  0  ~/.scripts/unison_sync.sh
 |4,39,1,0,1569588914,"~/.scripts/unison_sync.sh"
 -'  1  0  ~/.scripts/unison_sync.sh
@@ -375,6 +390,38 @@ $53
 |4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
 -'  16  13  ~/.scripts/unison_startup.sh
 |4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  16  13  ~/.scripts/unison_startup.sh
+|4,39,16,13,1569588657,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
+-'  1  0  ~/.scripts/unison_startup.sh
+|4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
 -'  1  0  ~/.scripts/unison_startup.sh
 |4,39,1,0,1569588634,"~/.scripts/unison_startup.sh"
 -'  1  0  ~/.scripts/unison_startup.sh
@@ -411,6 +458,26 @@ $53
 |4,39,17,32,1569588607,"~/.bash_aliases"
 -'  17  32  ~/.bash_aliases
 |4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
+-'  17  32  ~/.bash_aliases
+|4,39,17,32,1569588607,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
 |4,39,1,0,1569588589,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
@@ -427,112 +494,102 @@ $53
 |4,39,1,0,1569588589,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
 |4,39,1,0,1569588589,"~/.bash_aliases"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  1  ~/.scripts/snapshot.sh
-|4,39,1,1,1569588483,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
--'  1  12  ~/.scripts/snapshot.sh
-|4,39,1,12,1569588455,"~/.scripts/snapshot.sh"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588589,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588589,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588589,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588589,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1569588589,"~/.bash_aliases"
 
 # History of marks within files (newest to oldest):
+
+> ~/.config/i3/i3blocks/scripts/btrfs
+	*	1569591318	0
+	"	22	10
+	^	20	18
+	.	20	17
+	+	27	17
+	+	27	0
+	+	3	0
+	+	4	2
+	+	4	56
+	+	4	6
+	+	5	1
+	+	6	8
+	+	12	0
+	+	11	12
+	+	7	31
+	+	27	0
+	+	11	14
+	+	6	14
+	+	4	66
+	+	27	15
+	+	6	14
+	+	11	14
+	+	13	0
+	+	27	15
+	+	8	58
+	+	27	0
+	+	18	28
+	+	20	17
+	+	18	22
+	+	21	7
+	+	27	0
+	+	21	15
+	+	23	23
+	+	20	27
+	+	23	30
+	+	24	12
+	+	27	3
+	+	27	0
+	+	27	1
+	+	23	0
+	+	24	0
+	+	27	0
+	+	26	1
+	+	25	0
+	+	21	12
+	+	22	0
+	+	21	0
+	+	27	0
+	+	15	0
+	+	17	0
+	+	15	0
+	+	18	34
+	+	20	17
+	+	23	19
+	+	21	6
+	+	22	6
+	+	24	6
+	+	25	6
+	+	18	35
+	+	20	16
+	+	19	9
+	+	18	38
+	+	16	11
+	+	18	36
+	+	20	16
+	+	23	18
+	+	19	0
+	+	23	18
+	+	16	17
+	+	20	17
+
+> ~/.config/i3/i3blocks/scripts/temperature
+	*	1569591202	0
+	"	63	0
+
+> ~/.config/i3/i3blocks/i3blocks_remote.conf
+	*	1569591188	0
+	"	87	17
+	^	87	18
+	.	87	17
+	+	85	5
+	+	87	17
 
 > ~/.scripts/unison_sync_all.sh
 	*	1569589051	0
@@ -667,10 +724,6 @@ $53
 	+	40	0
 	+	43	19
 	+	44	0
-
-> ~/.config/i3/i3blocks/i3blocks_remote.conf
-	*	1569580434	0
-	"	94	0
 
 > ~/unison_sync_all.sh
 	*	1569519583	0
@@ -2817,14 +2870,3 @@ $53
 > /mnt/data/Documents/Studium/Master/2019-01_Peer-2-Peer/onion-17/src/util/server_socket.h
 	*	1568984853	0
 	"	10	0
-
-> /mnt/data/Documents/Studium/Master/2019-01_Peer-2-Peer/testing/src/main/java/org/voidphone/rps/api/RpsPeerMessage.java
-	*	1568964974	0
-	"	73	4
-
-> /mnt/data/Documents/Studium/Master/2019-01_Peer-2-Peer/2018-onion-java/Zwifl_und_Cnoufl/src/main/java/onion/api/OnionApiHandler.java
-	*	1568964244	0
-	"	93	2
-	.	220	0
-	+	264	2
-	+	220	0

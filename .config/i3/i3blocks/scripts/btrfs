@@ -1,0 +1,26 @@
+#!/bin/bash
+# \xe2\x80\x89 is the utf8 representation of \u2009
+
+all=$( btrfs filesystem usage -H -T "$BLOCK_INSTANCE" 2> /dev/null )
+ds=$(
+    echo "$all" \
+        | grep '^\s\+Device size' \
+        | sed 's/[^:]\+:\s\+\([0-9]\+\)\(\.[0-9]\+\)\?\(\w\).*/\1\xe2\x80\x89\3/'
+)
+df=$(
+    echo "$all" \
+        | grep '^\s\+Free' \
+        | sed 's/[^:]\+:\s\+\([0-9]\+\)\(\.[0-9]\+\)\?\(\w\).*/\1\xe2\x80\x89\3/'
+)
+
+printf '%s\n' "$df"
+
+diff=$(( ${df::-2} * 100 / ${ds::-2} ))
+
+if [[ $diff -le 15 ]]; then
+	printf "#FFFC00\n";
+	printf "#FFFC00\n";
+elif [[ $diff -le 10 ]]; then
+	printf "#FF0000\n";
+	printf "#FF0000\n";
+fi
