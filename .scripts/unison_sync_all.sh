@@ -26,7 +26,11 @@ if ! ping -c 1 $NAS_IP_INT > /dev/null; then
 else
 	PROFILE=int
 fi
+
 echo "Setting Profile to $PROFILE"
+
+echo "Taking Snapshot prior to Sync..."
+/home/julius/.scripts/snapshot.sh
 
 
 sed -i "1s/.*/active_sync/" $STATE_FILE

@@ -13,7 +13,7 @@ while [[ $? -ne 0 ]]; do
 	ssh-add -l > /dev/null 2>&1
 done
 
-/home/julius/unison_sync.sh documents
-/home/julius/unison_sync.sh music
-/home/julius/unison_sync.sh videos
-/home/julius/unison_sync.sh pictures
+/home/julius/.scripts/unison_sync.sh documents
+/home/julius/.scripts/unison_sync.sh music
+/home/julius/.scripts/unison_sync.sh videos
+/home/julius/.scripts/unison_sync.sh pictures
