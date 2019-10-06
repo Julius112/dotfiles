@@ -1,6 +1,7 @@
 #!/bin/bash
 
 STATE_FILE=/home/julius/.unison/status
+NAS_IP_INT="192.168.4.113"
 
 function sync {
 	echo "syncing $1..."
@@ -21,7 +22,7 @@ if [[ $? -ne 0 ]]; then
 	exit
 fi
 
-if ! ping -c 1 $NAS_IP_INT > /dev/null; then
+if ! /usr/bin/ping -c 1 $NAS_IP_INT > /dev/null; then
 	PROFILE=ext
 else
 	PROFILE=int
@@ -38,5 +39,10 @@ sync documents_$PROFILE
 sync music_$PROFILE
 sync videos_$PROFILE
 sync pictures_$PROFILE
+sed -i "1s/.*/idle/" $STATE_FILE
+
+echo "Mounting Familie..."
+curlftpfs -o utf8,ssl,cacert=/home/julius/niedserver.pem,no_verify_peer ftp://niedworok.no-ip.org:1321/Familie /mnt/familie
+sed -i "1s/.*/active_sync/" $STATE_FILE
 sync familie
 sed -i "1s/.*/idle/" $STATE_FILE

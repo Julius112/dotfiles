@@ -65,6 +65,8 @@ if ($player_arg eq '' or $player_arg =~ /cmus$/) {
 }
 
 my $artist = qx(playerctl $player_arg metadata artist);
+# JULIUS fix
+$artist =~ tr/\r\n//d;
 # exit status will be nonzero when playerctl cannot find your player
 exit(0) if $?;
 push(@metadata, $artist) if $artist;

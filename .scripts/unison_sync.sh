@@ -1,7 +1,7 @@
 #!/bin/bash
 
 STATE_FILE=/home/julius/.unison/status
-NAS_IP_INT=192.168.4.113
+NAS_IP_INT="192.168.4.113"
 
 /usr/bin/keychain $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
@@ -13,7 +13,7 @@ fi
 if [[ $1 == familie ]]; then
 	PROFILE=$1
 else
-	if ! ping -c 1 $NAS_IP_INT > /dev/null; then
+	if ! /usr/bin/ping -c 1 $NAS_IP_INT > /dev/null; then
 		LOC=ext
 	else
 		LOC=int

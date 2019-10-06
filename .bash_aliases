@@ -14,7 +14,7 @@ alias la='ls -alrtFh'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias off="/home/julius/.scripts/unison_sync_all.sh && sudo shutdown now"
+alias off="/home/julius/.scripts/unison_sync_all.sh || sudo shutdown now"
 alias offon="sudo reboot now"
 alias findn="find -name "
 
@@ -42,10 +42,13 @@ scan() {
 	else
 		count=$2
 	fi
+	if [ -z ${HP_SCANNER+x} ]; then
+		HP_SCANNER="hpaio:/net/deskjet_2540_series?ip=192.168.4.26&queue=false"
+	fi
 	DATE=`date +%Y_%m_%d`
 	if [ $count -gt 1 ]; then
 		for idx in $(seq 1 $count); do
-			hp-scan --resolution=200 --device="hpaio:/net/deskjet_2540_series?ip=192.168.4.26&queue=false" --size=a4 --mode=color --file="temp-$idx.pdf"
+			hp-scan --resolution=200 --device=$HP_SCANNER --size=a4 --mode=color --file="temp-$idx.pdf"
 			if [ $idx -lt $count ]; then
 				echo "Please insert next page and press ENTER to continue..."
 				read -n 1
@@ -56,8 +59,6 @@ scan() {
 			rm temp-*.pdf
 		fi
 	else
-		hp-scan --resolution=200 --device="hpaio:/net/deskjet_2540_series?ip=192.168.4.26&queue=false" --size=a4 --mode=color --file="$DATE-$NAME.pdf"
+		hp-scan --resolution=200 --device=$HP_SCANNER --size=a4 --mode=color --file="$DATE-$NAME.pdf"
 	fi
 }
-
-scannodate() { hp-scan --resolution=200 --device="hpaio:/net/deskjet_2540_series?ip=192.168.4.26&queue=false" --size=a4 --mode=color --file="$1" }

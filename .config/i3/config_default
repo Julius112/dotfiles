@@ -248,5 +248,8 @@ exec_always --no-startup-id setxkbmap de
 #mounting Familie over ftps
 #exec --no-startup-id curlftpfs -o utf8,ssl,cacert=/home/julius/niedserver.pem,no_verify_peer ftp://niedworok.no-ip.org:1321/Familie /mnt/Familie
 
+#sync everything
+exec --no-startup-id /home/julius/.scripts/unison_startup.sh
+
 #watching Docs for changes
 #exec --no-startup-id ~/unison_watch.sh &

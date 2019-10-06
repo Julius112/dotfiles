@@ -104,14 +104,19 @@ source .bash_aliases
 if ! grep -qs '/mnt/data ' /proc/mounts; then
 	sudo cryptsetup open -d /home/julius/.data_keyfile /dev/sda1 data
 	# wait for volume to be available
-	sudo lsblk | grep "vg--data-data" > /dev/null; while [[ $? -ne 0 ]] do sleep 1; done
+	lsblk | grep "vg--data-data" > /dev/null; while [[ $? -ne 0 ]] do sleep 1; done
 	sudo mount -o compress=zstd,user=julius /dev/mapper/vg--data-data /mnt/data
 fi
 
 # History settings
+HISTTIMEFORMAT="%h %d %H:%M:%S "
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=100000
+#HISTDUP=erase
+setopt appendhistory
+setopt incappendhistory
+unsetopt sharehistory
 
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 	exec startx
