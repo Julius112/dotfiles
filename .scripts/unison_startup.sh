@@ -34,13 +34,6 @@ fi
 
 echo "Setting Profile to $PROFILE" >> /tmp/unison_startup.log 2>&1
 
-echo "Taking Snapshot prior to Sync..." >> /tmp/unison_startup.log 2>&1
-/home/julius/.scripts/snapshot.sh >> /tmp/unison_startup.log 2>&1
-
-
 sed -i "1s/.*/active_sync/" $STATE_FILE
 sync documents_$PROFILE
-sync music_$PROFILE
-sync videos_$PROFILE
-sync pictures_$PROFILE
 sed -i "1s/.*/idle/" $STATE_FILE

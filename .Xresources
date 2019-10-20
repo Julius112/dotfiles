@@ -21,7 +21,7 @@
 !! for xtem 
 *background: #101010
 *foreground: lightgrey
-xterm*faceName: monospace:pixelsize=13
+xterm*faceName: monospace:pixelsize=10
 !Xlf.antialias:true
 !Xlf.hinting:true
 !Xlf.hintstyle:hintslight

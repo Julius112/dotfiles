@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/julius/.oh-my-zsh"
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,14 +100,6 @@ source $ZSH/oh-my-zsh.sh
 
 source .bash_aliases
 
-# Mount data partition
-if ! grep -qs '/mnt/data ' /proc/mounts; then
-	sudo cryptsetup open -d /home/julius/.data_keyfile /dev/sda1 data
-	# wait for volume to be available
-	lsblk | grep "vg--data-data" > /dev/null; while [[ $? -ne 0 ]] do sleep 1; done
-	sudo mount -o compress=zstd,user=julius /dev/mapper/vg--data-data /mnt/data
-fi
-
 # History settings
 HISTTIMEFORMAT="%h %d %H:%M:%S "
 HISTFILE=~/.histfile
@@ -125,7 +117,7 @@ else
 
 	### START-Keychain ###
 	# Let  re-use ssh-agent and/or gpg-agent between logins
-	/usr/bin/keychain $HOME/.ssh/id_ed25519
+	/usr/bin/keychain $HOME/.ssh/id_rsa
 	source $HOME/.keychain/$HOSTNAME-sh
 	### End-Keychain ###
 fi

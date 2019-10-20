@@ -24,12 +24,9 @@ fi
 
 echo "Setting Profile to $PROFILE"
 
-echo "Creating Snapshot prior to Sync..."
-/home/julius/.scripts/snapshot.sh
-
 for i in `seq 1 2`; do
 	sed -i "1s/.*/active_sync/" $STATE_FILE
-	/opt/bin/unison $PROFILE -ignore 'Name panacea.dat' -ignore 'Name aborted-session-ping' $2
+	/opt/bin/unison $PROFILE $2
 	if [ $? -ne 0 ]; then
 		sed -i -e "s/$1=./$1=0/g" $STATE_FILE
 		sed -i "1s/.*/active_sync/" $STATE_FILE
