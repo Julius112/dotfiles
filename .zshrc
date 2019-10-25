@@ -98,6 +98,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+man() {
+	LESS_TERMCAP_md=$'\e[01;31m' \
+	LESS_TERMCAP_me=$'\e[0m' \
+	LESS_TERMCAP_se=$'\e[0m' \
+	LESS_TERMCAP_so=$'\e[01;44;33m' \
+	LESS_TERMCAP_ue=$'\e[0m' \
+	LESS_TERMCAP_us=$'\e[01;32m' \
+	command man "$@"
+}
+
 source .bash_aliases
 
 # Mount data partition
@@ -111,8 +121,8 @@ fi
 # History settings
 HISTTIMEFORMAT="%h %d %H:%M:%S "
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=100000
+HISTSIZE=100000
+SAVEHIST=10000000
 #HISTDUP=erase
 setopt appendhistory
 setopt incappendhistory

@@ -15,13 +15,11 @@ function sync {
 	fi
 }
 
-/usr/bin/keychain $HOME/.ssh/id_ed25519 >> /tmp/unison_startup.log 2>&1
 source $HOME/.keychain/$HOSTNAME-sh >> /tmp/unison_startup.log 2>&1
 ssh-add -l >> /tmp/unison_startup.log 2>&1
 while [[ $? -ne 0 ]]; do
 	sed -i "1s/.*/active_wait/" $STATE_FILE
 	sleep 300
-	/usr/bin/keychain $HOME/.ssh/id_ed25519 >> /tmp/unison_startup.log 2>&1
 	source $HOME/.keychain/$HOSTNAME-sh >> /tmp/unison_startup.log 2>&1
 	ssh-add -l >> /tmp/unison_startup.log 2>&1
 done
