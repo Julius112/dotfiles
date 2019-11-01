@@ -41,15 +41,23 @@ awk -v type=$TYPE '
 END {
 	# full text
 	if (type == "swap") {
-		printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
-		printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
-		if ((swap_total-swap_free) > (1024*100)) {
+		swap_usage=(swap_total-swap_free)/1024
+		if (swap_usage > 900) {
+			printf("%.1fG\n", (swap_usage)/1024)
+			printf("%.1fG\n", (swap_usage)/1024)
+		}
+		else {
+			printf("%dM\n", (swap_usage))
+			printf("%dM\n", (swap_usage))
+		}
+		if ((swap_usage) > (100)) {
 			printf("#FFFC00\n");
 		}
 	}
 	else {
-		printf("%.1fG\n", (mem_total-mem_avail)/1024/1024)
-		printf("%.1fG\n", (mem_total-mem_avail)/1024/1024)
+		mem_used=mem_total-mem_avail
+		printf("%.1fG\n", (mem_used)/1024/1024)
+		printf("%.1fG\n", (mem_used)/1024/1024)
 		if ((mem_total/mem_avail) > 2) {
 			printf("#FFFC00\n");
 		}
