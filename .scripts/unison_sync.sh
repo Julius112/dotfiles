@@ -3,7 +3,6 @@
 STATE_FILE=/home/julius/.unison/status
 NAS_IP_INT="192.168.4.113"
 
-/usr/bin/keychain $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
 ssh-add -l
 if [[ $? -ne 0 ]]; then

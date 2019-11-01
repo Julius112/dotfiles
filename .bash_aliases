@@ -43,7 +43,7 @@ scan() {
 		count=$2
 	fi
 	if [ -z ${HP_SCANNER+x} ]; then
-		HP_SCANNER="hpaio:/net/deskjet_2540_series?ip=192.168.4.26&queue=false"
+		HP_SCANNER="hpaio:/net/deskjet_2540_series?ip=192.168.4.26"
 	fi
 	DATE=`date +%Y_%m_%d`
 	if [ $count -gt 1 ]; then

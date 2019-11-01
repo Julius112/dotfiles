@@ -1,2 +1,5 @@
 [Added Associations]
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;org.gnome.Evince.desktop;evince.desktop;
+application/pdf=zathura.desktop;
+[Default Applications]
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;zathura.desktop;
+
