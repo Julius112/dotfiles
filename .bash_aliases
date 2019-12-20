@@ -14,8 +14,8 @@ alias la='ls -alrtFh'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias off="/home/julius/.scripts/unison_sync_all.sh || sudo shutdown now"
-alias offon="sudo reboot now"
+alias off="/home/julius/.scripts/unison_sync.sh documents; sudo shutdown now"
+alias offon="sudo shutdown -r now"
 alias findn="find -name "
 
 #git aliases

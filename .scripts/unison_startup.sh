@@ -5,7 +5,7 @@ NAS_IP_INT="192.168.4.113"
 
 function sync {
 	echo "syncing $1..." >> /tmp/unison_startup.log
-	/opt/bin/unison $1
+	/opt/bin/unison $1_$PROFILE
 	if [ $? -eq 0 ]; then
 		/usr/bin/sed -i -e "s/$1=./$1=1/g" $STATE_FILE
 		echo "sucessfully synced $1" >> /tmp/unison_startup.log
@@ -35,5 +35,5 @@ fi
 echo "Setting Profile to $PROFILE" >> /tmp/unison_startup.log 2>&1
 
 /usr/bin/sed -i "1s/.*/active_sync/" $STATE_FILE
-sync documents_$PROFILE
+sync documents
 /usr/bin/sed -i "1s/.*/idle/" $STATE_FILE

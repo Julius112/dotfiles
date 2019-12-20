@@ -102,7 +102,7 @@ bindsym Mod1+Shift+Tab workspace prev
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 - Terminals"
 set $ws2 "2"
-set $ws3 "3 - KeePass"
+set $ws3 "3"
 set $ws4 "4 - Web"
 set $ws5 "5"
 set $ws6 "6"
@@ -254,6 +254,9 @@ exec_always --no-startup-id setxkbmap de
 
 #sync everything
 exec --no-startup-id /home/julius/.scripts/unison_startup.sh
+
+#watching Docs for changes
+exec --no-startup-id /usr/bin/sudo /usr/bin/systemctl restart pommed
 
 #watching Docs for changes
 #exec --no-startup-id ~/unison_watch.sh &

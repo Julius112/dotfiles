@@ -122,4 +122,5 @@ else
 	### End-Keychain ###
 fi
 
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PATH=$PATH:/opt/bin

@@ -2,4 +2,5 @@
 application/pdf=zathura.desktop;
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop;zathura.desktop;
+x-scheme-handler/sgnl=signal-desktop.desktop
 
