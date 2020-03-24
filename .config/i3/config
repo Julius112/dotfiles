@@ -205,11 +205,11 @@ bar {
 # set the lockshortcut
 #bindsym Pause exec ~/.config/i3/lock_screen.sh
 bindsym $mod+Shift+q exec ~/.config/i3/lock_screen.sh
-#exec --no-startup-id xautolock -locker "~/.config/i3/lock_screen.sh" -time 10 -detectsleep -notify 10
+exec --no-startup-id xautolock -locker "~/.config/i3/lock_screen.sh" -time 10 -detectsleep -notify 10
 
 # Keybindings for the screen-brightness
-#bindsym XF86MonBrightnessUp         exec --no-startup-id xbacklight +5
-#bindsym XF86MonBrightnessDown       exec --no-startup-id xbacklight -5
+bindsym XF86MonBrightnessUp         exec --no-startup-id xbacklight +5
+bindsym XF86MonBrightnessDown       exec --no-startup-id xbacklight -5
 
 # Toggle TouchPad
 bindsym XF86Tools                   exec ~/.scripts/toggle_touchpad.sh

@@ -37,3 +37,6 @@ st.alpha:	1
 !rofi.auto-select: true
 !rofi.eh: 4
 !rofi.theme: /usr/share/rofi/themes/solarized.rasi
+!
+!! for i3 padding
+Xft.dpi: 100
