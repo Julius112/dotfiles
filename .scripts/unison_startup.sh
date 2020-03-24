@@ -7,10 +7,10 @@ function sync {
 	echo "syncing $1..." >> /tmp/unison_startup.log
 	/opt/bin/unison $1_$PROFILE
 	if [ $? -eq 0 ]; then
-		/usr/bin/sed -i -e "s/$1=./$1=1/g" $STATE_FILE
+		/usr/bin/sed -i -e "s/$1=./$1=1/g" $STATE_FILE && pkill -RTMIN+1 i3blocks
 		echo "sucessfully synced $1" >> /tmp/unison_startup.log
 	else
-		/usr/bin/sed -i -e "s/$1=./$1=0/g" $STATE_FILE
+		/usr/bin/sed -i -e "s/$1=./$1=0/g" $STATE_FILE && pkill -RTMIN+1 i3blocks
 		echo "failed syncing $1" >> /tmp/unison_startup.log
 	fi
 }
@@ -19,7 +19,7 @@ function sync {
 source $HOME/.keychain/$HOSTNAME-sh >> /tmp/unison_startup.log 2>&1
 ssh-add -l >> /tmp/unison_startup.log 2>&1
 while [[ $? -ne 0 ]]; do
-	/usr/bin/sed -i "1s/.*/active_wait/" $STATE_FILE
+	/usr/bin/sed -i "1s/.*/active_wait/" $STATE_FILE && pkill -RTMIN+1 i3blocks
 	sleep 300
 	/usr/bin/keychain $HOME/.ssh/id_ed25519 >> /tmp/unison_startup.log 2>&1
 	source $HOME/.keychain/$HOSTNAME-sh >> /tmp/unison_startup.log 2>&1
@@ -34,6 +34,6 @@ fi
 
 echo "Setting Profile to $PROFILE" >> /tmp/unison_startup.log 2>&1
 
-/usr/bin/sed -i "1s/.*/active_sync/" $STATE_FILE
+/usr/bin/sed -i "1s/.*/active_sync/" $STATE_FILE && pkill -RTMIN+1 i3blocks
 sync documents
-/usr/bin/sed -i "1s/.*/idle/" $STATE_FILE
+/usr/bin/sed -i "1s/.*/idle/" $STATE_FILE && pkill -RTMIN+1 i3blocks

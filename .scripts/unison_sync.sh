@@ -24,15 +24,15 @@ fi
 echo "Setting Profile to $PROFILE"
 
 for i in `seq 1 2`; do
-	sed -i "1s/.*/active_sync/" $STATE_FILE
+	sed -i "1s/.*/active_sync/" $STATE_FILE && pkill -RTMIN+1 i3blocks
 	/opt/bin/unison $PROFILE $2
 	if [ $? -ne 0 ]; then
 		sed -i -e "s/$1=./$1=0/g" $STATE_FILE
-		sed -i "1s/.*/active_sync/" $STATE_FILE
+		sed -i "1s/.*/active_sync/" $STATE_FILE && pkill -RTMIN+1 i3blocks
 	else
-		sed -i -e "s/$1=./$1=1/g" $STATE_FILE
+		sed -i -e "s/$1=./$1=1/g" $STATE_FILE && pkill -RTMIN+1 i3blocks
 		break
 	fi
 	sleep 20
 done
-sed -i "1s/.*/idle/" $STATE_FILE
+sed -i "1s/.*/idle/" $STATE_FILE && pkill -RTMIN+1 i3blocks
