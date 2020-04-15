@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 
 source .bash_aliases
 
+# Vi mode
+bindkey -v
+#export KEYTIMEOUT=1
+
 # History settings
 HISTTIMEFORMAT="%h %d %H:%M:%S "
 HISTFILE=~/.histfile
