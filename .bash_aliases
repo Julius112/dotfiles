@@ -43,12 +43,14 @@ scan() {
 		count=$2
 	fi
 	if [ -z ${HP_SCANNER+x} ]; then
-		HP_SCANNER="hpaio:/net/Deskjet_2540_series?ip=192.168.4.26"
+		#HP_SCANNER="hpaio:/net/Deskjet_2540_series?ip=192.168.4.26"
+		HP_SCANNER="hpaio:/net/Officejet_J4680_series?ip=192.168.4.110"
 	fi
 	DATE=`date +%Y_%m_%d`
 	if [ $count -gt 1 ]; then
 		for idx in $(seq 1 $count); do
-			hp-scan --resolution=200 --device=$HP_SCANNER --size=a4 --mode=color --file="temp-$idx.pdf"
+			#hp-scan --resolution=200 --device=$HP_SCANNER --tlx=0 --tly=0 --brx=220 --bry=300 --mode=color --file="temp-$idx.pdf"
+			hp-scan --resolution=200 --device=$HP_SCANNER --mode=color --adf --file="temp-$idx.pdf"
 			if [ $idx -lt $count ]; then
 				echo "Please insert next page and press ENTER to continue..."
 				read -n 1
@@ -59,6 +61,7 @@ scan() {
 			rm temp-*.pdf
 		fi
 	else
-		hp-scan --resolution=200 --device=$HP_SCANNER --size=a4 --mode=color --file="$DATE-$NAME.pdf"
+		#hp-scan --resolution=200 --device=$HP_SCANNER --tlx=0 --tly=0 --brx=220 --bry=300 --mode=color --file="$DATE-$NAME.pdf"
+		hp-scan --resolution=200 --device=$HP_SCANNER --mode=color --adf --file="$DATE-$NAME.pdf"
 	fi
 }

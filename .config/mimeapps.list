@@ -1,5 +1,6 @@
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;org.gnome.Evince.desktop;evince.desktop;
+application/x-ns-proxy-autoconfig=firefox.desktop;
 
 [Default Applications]
 x-scheme-handler/sgnl=signal-desktop.desktop

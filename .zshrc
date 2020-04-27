@@ -98,6 +98,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Vi mode
+bindkey -v
+bindkey "^R" history-incremental-search-backward
+
 man() {
 	LESS_TERMCAP_md=$'\e[01;31m' \
 	LESS_TERMCAP_me=$'\e[0m' \
@@ -116,6 +120,7 @@ if ! grep -qs '/mnt/data ' /proc/mounts; then
 	# wait for volume to be available
 	lsblk | grep "vg--data-data" > /dev/null; while [[ $? -ne 0 ]] do sleep 1; done
 	sudo mount -o compress=zstd,user=julius /dev/mapper/vg--data-data /mnt/data
+	pass git pull &
 fi
 
 # History settings

@@ -5,6 +5,8 @@
 #if ! xrandr --listmonitors | grep "TODO" > /dev/null; then
 
 #check the amount of connected displays and if its work, set the layout for work.
+xrandr --auto
+location=nied
 noconnected=$(xrandr | grep " connected" | wc -l)
 case "$noconnected" in 
 	1)
@@ -12,6 +14,9 @@ case "$noconnected" in
 		;;
 	2)
 		location=home
+		;; 
+	3)
+		location=nied
 		;; 
 esac
 

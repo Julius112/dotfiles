@@ -55,16 +55,24 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# move focused workspace
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+l move workspace to output right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+Right move workspace to output right
 
 # split in horizontal orientation
 bindsym $mod+g split h
@@ -99,7 +107,7 @@ bindsym Mod1+Shift+Tab workspace prev
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 - Terminals"
 set $ws2 "2"
-set $ws3 "3 - KeePass"
+set $ws3 "3"
 set $ws4 "4 - Web"
 set $ws5 "5"
 set $ws6 "6"
@@ -148,6 +156,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 for_window [class="St"] border pixel 2 
+for_window [class="XTerm"] border pixel 2 
 for_window [class="Zathura"] border pixel 2 
 for_window [class="Signal"] border pixel 2 
 
