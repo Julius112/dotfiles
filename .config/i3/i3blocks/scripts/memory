@@ -41,10 +41,12 @@ awk -v type=$TYPE '
 END {
 	# full text
 	if (type == "swap") {
-		printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
-		printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
 		if ((swap_total-swap_free) > (1024*100)) {
-			printf("#FFFC00\n");
+			printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
+			printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
+			if ((swap_total-swap_free) > (1024*1024)) {
+				printf("#FFFC00\n");
+			}
 		}
 	}
 	else {

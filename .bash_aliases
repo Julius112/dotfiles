@@ -29,6 +29,9 @@ alias pacman="sudo pacman"
 alias mount="sudo mount -o uid=1000,gid=1000"
 alias umount="sudo umount"
 
+#latex aliases
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
 #scanning
 #alias scan="DATE=`date +%Y_%m_%d` && hp-scan --device='hpaio:/net/Deskjet_2540_series?ip=192.168.4.26' --file=$DATE-"
 scan() {
@@ -50,7 +53,7 @@ scan() {
 	if [ $count -gt 1 ]; then
 		for idx in $(seq 1 $count); do
 			#hp-scan --resolution=200 --device=$HP_SCANNER --tlx=0 --tly=0 --brx=220 --bry=300 --mode=color --file="temp-$idx.pdf"
-			hp-scan --resolution=200 --device=$HP_SCANNER --mode=color --adf --file="temp-$idx.pdf"
+			hp-scan --resolution=200 --device=$HP_SCANNER --mode=color --size=a4 --adf --file="temp-$idx.pdf"
 			if [ $idx -lt $count ]; then
 				echo "Please insert next page and press ENTER to continue..."
 				read -n 1
@@ -62,6 +65,6 @@ scan() {
 		fi
 	else
 		#hp-scan --resolution=200 --device=$HP_SCANNER --tlx=0 --tly=0 --brx=220 --bry=300 --mode=color --file="$DATE-$NAME.pdf"
-		hp-scan --resolution=200 --device=$HP_SCANNER --mode=color --adf --file="$DATE-$NAME.pdf"
+		hp-scan --resolution=200 --device=$HP_SCANNER --mode=color --adf --size=a4 --file="$DATE-$NAME.pdf"
 	fi
 }

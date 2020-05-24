@@ -1,11 +1,11 @@
 #!/bin/bash
 
 STATE_FILE=/home/julius/.unison/status
-NAS_IP_INT="192.168.4.113"
+NAS_IP_INT="192.168.4.112"
 
 function sync {
 	echo "syncing $1..." >> /tmp/unison_startup.log
-	/opt/bin/unison $1
+	/opt/bin/unison $1_$2
 	if [ $? -eq 0 ]; then
 		sed -i -e "s/$1=./$1=1/g" $STATE_FILE
 		echo "sucessfully synced $1" >> /tmp/unison_startup.log
@@ -37,8 +37,6 @@ echo "Taking Snapshot prior to Sync..." >> /tmp/unison_startup.log 2>&1
 
 
 sed -i "1s/.*/active_sync/" $STATE_FILE
-sync documents_$PROFILE
-sync music_$PROFILE
-sync videos_$PROFILE
-sync pictures_$PROFILE
+sync documents $PROFILE
+sync familie $PROFILE
 sed -i "1s/.*/idle/" $STATE_FILE
