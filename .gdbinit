@@ -1,2 +1,2 @@
-add-auto-load-safe-path /mnt/data/Documents/Studium/Master/2019-01_Peer-2-Peer/onion-17/.gdbinit
+add-auto-load-safe-path /mnt/data/Documents/Studium/Master/2020-01_Master-Thesis/code/wasp_orchestrator/desktop/.gdbinit
 source /usr/share/pwndbg/gdbinit.py

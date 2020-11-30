@@ -29,7 +29,7 @@ echo "Creating Snapshot prior to Sync..."
 
 for i in `seq 1 2`; do
 	sed -i "1s/.*/active_sync/" $STATE_FILE
-	/opt/bin/unison $PROFILE -ignore 'Name panacea.dat' -ignore 'Name aborted-session-ping' -ignore 'Name {*/,.*/}.git' -ignore 'Name *.o' -ignore 'Name *.a' -ignore 'Name *.obj' -ignore 'Name popstate.dat' $2
+	/opt/bin/unison $PROFILE -ignore 'Path E-Mail/Thunderbird_Profile' -ignore 'Name {*/,.*/}.git' -ignore 'Name *.o' -ignore 'Name *.a' -ignore 'Name *.obj' -ignore 'Name popstate.dat' $2
 	if [ $? -ne 0 ]; then
 		sed -i -e "s/$1=./$1=0/g" $STATE_FILE
 		sed -i "1s/.*/active_sync/" $STATE_FILE
@@ -37,6 +37,6 @@ for i in `seq 1 2`; do
 		sed -i -e "s/$1=./$1=1/g" $STATE_FILE
 		break
 	fi
-	sleep 20
+	sleep 600
 done
 sed -i "1s/.*/idle/" $STATE_FILE

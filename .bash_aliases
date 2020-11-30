@@ -14,7 +14,8 @@ alias la='ls -alrtFh'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias off="/home/julius/.scripts/unison_sync_all.sh; sudo shutdown now"
+alias off="ssh pi@esptest1 sudo shutdown now; ssh pi@esptest2 sudo shutdown now; /home/julius/.scripts/unison_sync_all.sh; sudo shutdown now"
+alias slp="ssh pi@esptest1 sudo shutdown now; ssh pi@esptest2 sudo shutdown now; /home/julius/.scripts/unison_sync_all.sh; systemctl hybrid-sleep"
 alias offon="sudo reboot now"
 alias findn="find -name "
 
@@ -31,6 +32,11 @@ alias umount="sudo umount"
 
 #latex aliases
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
+# thefuck
+eval $(thefuck --alias)
+alias f="fuck -y"
+
 
 #scanning
 #alias scan="DATE=`date +%Y_%m_%d` && hp-scan --device='hpaio:/net/Deskjet_2540_series?ip=192.168.4.26' --file=$DATE-"

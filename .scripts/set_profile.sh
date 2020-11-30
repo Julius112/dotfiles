@@ -11,6 +11,7 @@ noconnected=$(xrandr | grep " connected" | wc -l)
 case "$noconnected" in 
 	1)
 		location=remote
+		nmcli radio wifi on
 		;;
 	2)
 		location=home
