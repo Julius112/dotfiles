@@ -28,8 +28,8 @@ if [ -z ${var+x} ]; then
 	sh ~/.screenlayout/$location.sh > /dev/null 2>&1
 
 	# set the right i3 config
-	cp ~/.config/i3/config_$location ~/.config/i3/config
-	cat ~/.config/i3/config_default >> ~/.config/i3/config
+	cp ~/.config/i3/config_default ~/.config/i3/config
+	cat ~/.config/i3/config_$location >> ~/.config/i3/config
 	cp ~/.config/i3/i3blocks/i3blocks_$location.conf ~/.config/i3/i3blocks/i3blocks.conf
 	i3-msg restart > /dev/null 2>&1
 	echo $location
