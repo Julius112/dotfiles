@@ -14,7 +14,8 @@ case "$noconnected" in
 		nmcli radio wifi on
 		;;
 	2)
-		location=home
+		location=skillbyte
+		nmcli radio wifi off
 		;; 
 	3)
 		location=nied

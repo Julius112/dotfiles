@@ -1,0 +1,6 @@
+bingmarket: "zh-CN"
+wallpaperdir: "~/.config/background.png"
+desktopenvironment: "i3"
+updateinterval: 6h
+pictureoptions: ""
+defaultcommand: "/usr/bin/feh --bg-fill"

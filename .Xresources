@@ -21,14 +21,21 @@
 !! for xtem 
 *background: #101010
 *foreground: lightgrey
-xterm*faceName: monospace:pixelsize=13
+xterm*faceName: iosevka:pixelsize=26
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
 !Xlf.antialias:true
 !Xlf.hinting:true
 !Xlf.hintstyle:hintslight
 !Xlf.lcdfilter:lcddefault
 !Xlf.rgba:rg
-st.font:	Liberation Mono:pixelsize=13:antialias=true:autohint=true;
+Xft.dpi: 192
+
+st.font:	Iosevka:pixelsize=26:antialias=true:autohint=true;
 st.alpha:	1
+
 
 !rofi.lines: 4
 !rofi.width: 50

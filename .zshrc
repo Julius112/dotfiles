@@ -114,14 +114,8 @@ man() {
 
 source .bash_aliases
 
-# Mount data partition
-if ! grep -qs '/mnt/data ' /proc/mounts; then
-	sudo cryptsetup open -d /home/julius/.data_keyfile /dev/disk/by-uuid/c1a6876b-a31c-4fbe-a451-a2782d80e6a6 data
-	# wait for volume to be available
-	lsblk | grep "vg--data-data" > /dev/null; while [[ $? -ne 0 ]] do sleep 1; done
-	sudo mount -o compress=zstd,user=julius /dev/mapper/vg--data-data /mnt/data
-	pass git pull &
-fi
+# automatic pull of passwords
+#pass git pull &
 
 # History settings
 HISTTIMEFORMAT="%h %d %H:%M:%S "
@@ -135,6 +129,7 @@ unsetopt sharehistory
 
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 	exec startx
+	./.scripts/set_profile.sh
 else
 	HOSTNAME=`hostname`
 
