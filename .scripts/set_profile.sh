@@ -7,20 +7,19 @@
 #check the amount of connected displays and if its work, set the layout for work.
 xrandr --auto
 location=nied
-noconnected=$(xrandr | grep " connected" | wc -l)
-case "$noconnected" in 
-	1)
-		location=remote
-		nmcli radio wifi on
-		;;
-	2)
-		location=skillbyte
-		nmcli radio wifi off
-		;; 
-	3)
-		location=nied
-		;; 
-esac
+mon=$(xrandr | grep " connected")
+if [[ $mon =~ "eDP-1" && $mon =~ "HDMI-1" ]]
+then
+	location=nied
+	nmcli radio wifi on
+elif  [[ $mon =~ "eDP-1" && $mon =~ $'\nDP-1' ]]
+then
+	location=skillbyte
+	nmcli radio wifi off
+else
+	location=remote
+	nmcli radio wifi on
+fi
 
 if [ -z ${var+x} ]; then
 
@@ -31,6 +30,8 @@ if [ -z ${var+x} ]; then
 	cp ~/.config/i3/config_default ~/.config/i3/config
 	cat ~/.config/i3/config_$location >> ~/.config/i3/config
 	cp ~/.config/i3/i3blocks/i3blocks_$location.conf ~/.config/i3/i3blocks/i3blocks.conf
+	cp ~/.Xresources_$location ~/.Xresources
+	xrdb -merge ~/.Xresources
 	i3-msg restart > /dev/null 2>&1
 	echo $location
 

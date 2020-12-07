@@ -141,3 +141,4 @@ else
 fi
 
 export PATH=$PATH:/opt/bin
+xset -b
