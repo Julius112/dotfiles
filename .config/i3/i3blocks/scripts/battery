@@ -21,10 +21,15 @@ my $status;
 my $percent;
 my $full_text;
 my $short_text;
-my $bat_number = $ENV{BLOCK_INSTANCE} || 0;
+my $bat_number = $ENV{BLOCK_INSTANCE} || -1;
 
 # read the first line of the "acpi" command output
-open (ACPI, "acpi -b | grep 'Battery $bat_number' |") or die;
+if ($bat_number >= 0) {
+	open (ACPI, "acpi -b | grep 'Battery $bat_number' |") or die;
+}
+else {
+	open (ACPI, "acpi -b | grep -v ', rate information unavailable' | tail -n 1 |") or die;
+}
 $acpi = <ACPI>;
 close(ACPI);
 

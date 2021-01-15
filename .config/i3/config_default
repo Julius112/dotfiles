@@ -203,10 +203,6 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bindsym $mod+Shift+q exec ~/.config/i3/lock_screen.sh
 exec --no-startup-id xautolock -locker "~/.config/i3/lock_screen.sh" -time 10 -detectsleep -notify 10
 
-# Keybindings for the screen-brightness
-bindsym XF86MonBrightnessUp         exec --no-startup-id xbacklight +5
-bindsym XF86MonBrightnessDown       exec --no-startup-id xbacklight -5
-
 # Toggle TouchPad
 bindsym XF86Tools                   exec ~/.scripts/toggle_touchpad.sh
 
@@ -239,6 +235,10 @@ exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id setxkbmap de
 
+# screen brightness controll
+bindsym XF86MonBrightnessUp exec xbacklight -inc 2
+bindsym XF86MonBrightnessDown exec xbacklight -dec 2
+
 #for renaming i3 workspaces according to the terminal
 #exec_always --no-startup-id ~/.config/i3/i3-renameworkspaces/i3-renameworkspaces.pl -c ~/.config/i3/i3-renameworkspaces/config
 
@@ -246,4 +246,4 @@ exec_always --no-startup-id setxkbmap de
 #exec_always --no-startup-id unclutter
 
 #updating wallpaper
-exec --no-startup-id /usr/bin/bing-wallpaper
+exec_always --no-startup-id sleep 5 && /usr/bin/bing-wallpaper

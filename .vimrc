@@ -17,7 +17,7 @@ endif
 command! W w|!make
 
 " Use system keyboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Set search highlighting
 :set hlsearch
