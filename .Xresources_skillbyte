@@ -21,7 +21,7 @@
 !! for xtem 
 *background: #101010
 *foreground: lightgrey
-xterm*faceName: iosevka:pixelsize=12
+xterm*faceName: iosevka:pixelsize=26
 xterm*VT100.Translations: #override \
                  Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
                  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
@@ -32,7 +32,7 @@ xterm*visualBell: False
 !Xlf.hintstyle:hintslight
 !Xlf.lcdfilter:lcddefault
 !Xlf.rgba:rg
-Xft.dpi: 92
+Xft.dpi: 192
 
 st.font:	Iosevka:pixelsize=26:antialias=true:autohint=true;
 st.alpha:	1
