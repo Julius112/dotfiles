@@ -24,7 +24,7 @@ fi
 if [ -z ${var+x} ]; then
 
 	# set screenlayout
-	sh /home/julius/.screenlayout/$location.sh > /dev/null 2>&1
+	sh $HOME/.screenlayout/$location.sh > /dev/null 2>&1
 
 	# set the right i3 config
 	cp ~/.config/i3/config_default ~/.config/i3/config

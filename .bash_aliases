@@ -17,8 +17,8 @@ alias kns='kubectl config set-context --current --namespace='
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias off="ssh pi@esptest1 sudo shutdown now; ssh pi@esptest2 sudo shutdown now; /home/julius/.scripts/unison_sync_all.sh; sudo shutdown now"
-alias slp="ssh pi@esptest1 sudo shutdown now; ssh pi@esptest2 sudo shutdown now; /home/julius/.scripts/unison_sync_all.sh; systemctl hybrid-sleep"
+alias off="$HOME/.scripts/unison_sync_all.sh; sudo shutdown now"
+alias slp="$HOME/.scripts/unison_sync_all.sh; systemctl hybrid-sleep"
 alias offon="sudo reboot now"
 alias findn="find -name "
 

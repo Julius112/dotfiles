@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-STATE_FILE=/home/julius/.unison/status
+STATE_FILE=$HOME/.unison/status
 failed=0
 
 { read -r prog_state && read -r states; } < $STATE_FILE

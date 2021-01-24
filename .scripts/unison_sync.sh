@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STATE_FILE=/home/julius/.unison/status
+STATE_FILE=$HOME/.unison/status
 NAS_IP_INT="192.168.4.112"
 
 /usr/bin/keychain $HOME/.ssh/id_ed25519
@@ -25,7 +25,7 @@ fi
 echo "Setting Profile to $PROFILE"
 
 echo "Creating Snapshot prior to Sync..."
-/home/julius/.scripts/snapshot.sh
+$HOME/.scripts/snapshot.sh
 
 for i in `seq 1 2`; do
 	sed -i "1s/.*/active_sync/" $STATE_FILE

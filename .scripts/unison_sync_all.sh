@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STATE_FILE=/home/julius/.unison/status
+STATE_FILE=$HOME/.unison/status
 NAS_IP_INT="192.168.4.112"
 
 function sync {
@@ -31,7 +31,7 @@ fi
 echo "Setting Profile to $PROFILE"
 
 echo "Taking Snapshot prior to Sync..."
-/home/julius/.scripts/snapshot.sh
+$HOME/.scripts/snapshot.sh
 
 
 sed -i "1s/.*/active_sync/" $STATE_FILE
