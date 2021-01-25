@@ -1,3 +1,3 @@
 #!/usr/bin/sh
 
-sudo /opt/bin/snapbtr -p /mnt/data/.snapshots -s /mnt/data -F 30G -K 3 -B 15
+sudo $HOME/.scripts/snapbtr -p /home/.snapshots -s /home -F 30G -K 3 -B 25
