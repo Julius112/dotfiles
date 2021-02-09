@@ -1,14 +1,40 @@
 #!/usr/bin/bash
 
+t_freeze=-5
+t_cold=0
+t_cool=5
+t_norm=15
+t_warm=20
+t_nice=25
+#t_hot=30
+
+
 result=$(/usr/bin/curl --silent -G 'http://192.168.4.112:8086/query?db=weather' --data-urlencode 'q=SELECT last("temperature") FROM "weather" WHERE time > now() - 10m' | /usr/bin/jq ".results[0].series[0].values[0][1]")
 
-printf "%.1f\n" $result
+printf "%.1f °C\n" $result
 
-#if [[ $result -lt 0.0 ]]; then
-#	printf "#0000FF\n";
-#elif [[ $result -lt 10.0 ]]; then
-#	printf "#00AEFF\n";
-#
+if (( $(echo "$result < $t_freeze" | /usr/bin/bc -l) )); then
+	printf "#0055FF\n";
+	printf "#0055FF\n";
+elif (( $(echo "$result < $t_cold" | /usr/bin/bc -l) )); then
+	printf "#00AAFF\n";
+	printf "#00AAFF\n";
+elif (( $(echo "$result < $t_cool" | /usr/bin/bc -l) )); then
+	printf "#00FFAA\n";
+	printf "#00FFAA\n";
+elif (( $(echo "$result < $t_norm" | /usr/bin/bc -l) )); then
+	printf "#AAFFAA\n";
+	printf "#AAFFAA\n";
+elif (( $(echo "$result < $t_warm" | /usr/bin/bc -l) )); then
+	printf "#AAFF55\n";
+	printf "#AAFF55\n";
+elif (( $(echo "$result < $t_nice" | /usr/bin/bc -l) )); then
+	printf "#FFAA00\n";
+	printf "#FFAA00\n";
+else
+	printf "#FF5500\n";
+	printf "#FF5500\n";
+fi
 #if ($result < 20) {
 #	print "#FF0000\n";
 #} elsif ($percent < 40) {
