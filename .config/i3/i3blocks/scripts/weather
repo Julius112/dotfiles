@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+result=$(/usr/bin/curl --silent -G 'http://192.168.4.112:8086/query?db=weather' --data-urlencode 'q=SELECT last("temperature") FROM "weather" WHERE time > now() - 10m' | /usr/bin/jq ".results[0].series[0].values[0][1]")
+
+printf "%.1f\n" $result
+
+#if [[ $result -lt 0.0 ]]; then
+#	printf "#0000FF\n";
+#elif [[ $result -lt 10.0 ]]; then
+#	printf "#00AEFF\n";
+#
+#if ($result < 20) {
+#	print "#FF0000\n";
+#} elsif ($percent < 40) {
+#	print "#FFAE00\n";
+#} elsif ($percent < 60) {
+#	print "#FFF600\n";
+#} elsif ($percent < 85) {
+#	print "#A8FF00\n";
+#}

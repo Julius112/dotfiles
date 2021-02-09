@@ -128,6 +128,7 @@ setopt incappendhistory
 unsetopt sharehistory
 
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+#if pidof X; then
 	exec startx
 	./.scripts/set_profile.sh
 else

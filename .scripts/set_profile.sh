@@ -8,14 +8,15 @@
 xrandr --auto
 location=nied
 mon=$(xrandr | grep " connected")
-if [[ $mon =~ "eDP-1" && $mon =~ "HDMI-1" ]]
+#if [[ $mon =~ "eDP-1" && $mon =~ "HDMI-1" ]]
+if  [[ $mon =~ "eDP-1" && $mon =~ $'\nDP-1' ]]
 then
 	location=nied
 	nmcli radio wifi on
-elif  [[ $mon =~ "eDP-1" && $mon =~ $'\nDP-1' ]]
-then
-	location=skillbyte
-	nmcli radio wifi off
+#elif  [[ $mon =~ "eDP-1" && $mon =~ $'\nDP-1' ]]
+#then
+#	location=skillbyte
+#	nmcli radio wifi off
 else
 	location=remote
 	nmcli radio wifi on

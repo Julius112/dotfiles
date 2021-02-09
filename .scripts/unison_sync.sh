@@ -10,17 +10,13 @@ if [[ $? -ne 0 ]]; then
 	exit
 fi
 
-if [[ $1 == familie ]]; then
-	PROFILE=$1
+if ! /usr/bin/ping -c 1 $NAS_IP_INT > /dev/null; then
+	LOC=ext
 else
-	if ! /usr/bin/ping -c 1 $NAS_IP_INT > /dev/null; then
-		LOC=ext
-	else
-		LOC=int
-	fi
-
-	PROFILE=$1_$LOC
+	LOC=int
 fi
+
+PROFILE=$1_$LOC
 
 echo "Setting Profile to $PROFILE"
 
