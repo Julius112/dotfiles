@@ -40,6 +40,17 @@ alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 eval $(thefuck --alias)
 alias f="fuck -y"
 
+# work
+passq () {
+	if [[ $1 == "show" ]]; then
+		sudo -u qualle -i -H gpg --pinentry-mode loopback -d /home/qualle/.password-store/$2.gpg
+	elif [[ $1 == "find" ]]; then
+		sudo -u qualle -i -H pass find $2
+	else
+		echo 'not implemented'
+	fi
+}
+
 
 #scanning
 #alias scan="DATE=`date +%Y_%m_%d` && hp-scan --device='hpaio:/net/Deskjet_2540_series?ip=192.168.4.26' --file=$DATE-"
